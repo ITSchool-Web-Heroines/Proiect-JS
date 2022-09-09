@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOPPING BAG</title>
+    <link rel="stylesheet" href="./style-all.scss" />
+    <link rel="stylesheet" href="./style/style-cart.scss" />
+  </head>
+  <body id="top">
+    <div class="banner-box">
+      <p class="banner-text">FREE SHIPPING ON ORDERS OVER 50$</p>
+      <button type="button" class="btn-close">&#10006;</button>
+    </div>
+    <nav class="navbar">
+      <a href="./index.html" style="text-decoration: none">
+        <img
+          src="./ICON/LW.png"
+          alt="CAIMAC COFFEE"
+          class="nav-branding logo"
+        />
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="./learn.html" class="nav-link">LEARN</a>
+        </li>
+        <li class="nav-item">
+          <a href="./shop.html" class="nav-link">SHOP</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a href="./cart.html">
+            <img src="./ICON/SW.png" alt="Shopping Cart" class="shop-logo" />
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+    </nav>
+    <main>
+      <img src="./ICON/SW.png" alt="Shopping Cart" class="shop-cart" />
+      <p class="cart-title">BAG OF GOODIES</p>
+      <section class="empty-cart">
+        <p class="cart-subtitle">Your bag is currently empty.</p>
+        <a href="shop.html" class="content-button">continue shopping &rarr;</a>
+      </section>
+      <section></section>
+    </main>
+    <footer class="footer-box">
+      <section class="footer-logo-box">
+        <img src="./ICON/PLW.png" alt="Caimac Logo" class="footer-PL" />
+        <img src="./ICON/LW.png" alt="CAIMAC COFFEE" class="footer-WL" />
+      </section>
+      <section class="footer-newsletter">
+        <label for="newsEmail" class="footer-item">
+          SIGN UP FOR OUR DELICIOUS NEWSLETTER
+        </label>
+        <input
+          class="input-email"
+          type="email"
+          id="newsEmail"
+          placeholder="GET THE LATEST FROM CAIMAC COFFEE"
+        />
+        <button class="content-button btn-news" type="submit">SUBSCRIBE</button>
+      </section>
+      <div class="divider one">&#9632;</div>
+      <section class="footer-menu-box">
+        <a href="./index.html" class="footer-item">HOME</a>
+        <a href="./learn.html" class="footer-item">LEARN</a>
+        <a href="./shop.html" class="footer-item">SHOP</a>
+        <a href="./contact.html" class="footer-item">CONTACT</a>
+      </section>
+      <div class="divider two">&#9632;</div>
+      <section class="footer-policy-box">
+        <a href="#" class="footer-item">PRIVACY POLICY</a>
+        <a href="#" class="footer-item">TERMS OF SALE</a>
+        <a href="#" class="footer-item">TERMS OF USE</a>
+      </section>
+      <div class="divider three">&#9632;</div>
+      <p class="copyright footer-item">&copy; CAIMAC COFFEE 2022</p>
+    </footer>
+    <nav class="back-top empty">
+      <a class="back-top-btn" href="#top">
+        <img class="back-top-img" src="./ICON/AB.png" alt="GO UP" />
+      </a>
+    </nav>
+    <script src="./javascript/all.js" type="module"></script>
+    <script src="./javascript/banner.js" type="module"></script>
+  </body>
+</html>

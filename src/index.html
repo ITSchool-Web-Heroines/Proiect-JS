@@ -1,23 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Proiect JavaScript</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.scss" />
-    <script type="module" src="./index.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caimac Coffee</title>
+    <link rel="stylesheet" href="./style-all.scss" />
+    <link rel="stylesheet" href="./style/style-index.scss" />
   </head>
-  <body>
-    <div class="vh-100 d-flex flex-column">
-      <header class="navbar bg-primary bg-gradient">
-        <div class="container-fluid">
-          <h1 class="navbar-brand mb-0 text-white">Proiect JavaScript</h1>
+  <body id="top">
+    <div class="news-blur">
+      <div class="news-big-box">
+        <div class="news-box">
+          <img class="news-img" src="ICON/PLB.png" alt="Caimac Logo" />
+          <a href="#" class="news-btn-x">&#10006;</a>
+          <div class="text-box">
+            <p class="news-text title">Incoming treat!</p>
+            <p class="news-text">
+              Get 10% off your next order just by signing up!
+            </p>
+            <label class="news-text title" for="subscribeName">NAME</label>
+            <input class="input-ad-name" id="subscribeName" type="text" />
+            <label class="news-text title" for="subscribeEmail">EMAIL</label>
+            <input class="input-ad-email" type="email" id="subscribeEmail" />
+            <button class="ad-news-submit" type="submit">SUBSCRIBE</button>
+          </div>
         </div>
-      </header>
-      <main class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
-        <h2 class="display-1 text-center">15 Septembrie 2022</h2>
-      </main>
+      </div>
     </div>
+    <header class="logo-menu">
+      <nav class="navbar">
+        <a href="./index.html" style="text-decoration: none">
+          <img
+            src="./ICON/LW.png"
+            alt="CAIMAC COFFEE"
+            class="nav-branding logo"
+          />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="./learn.html" class="nav-link">LEARN</a>
+          </li>
+          <li class="nav-item">
+            <a href="./shop.html" class="nav-link">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a href="./cart.html">
+              <img src="./ICON/SW.png" alt="Shopping Cart" class="shop-logo" />
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      </nav>
+      <div class="subtitle-box">
+        <p class="subtitle title">Taste the paradise.</p>
+        <p class="subtitle subtitle">Take a sip of the nectar of the Gods.</p>
+      </div>
+    </header>
+    <main>
+      <section class="about-box">
+        <div class="logo-subtitle">
+          <img src="ICON/PLW.png" alt="Caimac Logo" class="pic-logo" />
+          <p class="about-title">Quality from bean to cup.</p>
+        </div>
+        <div class="text-button">
+          <p class="about-text">
+            We do everything to achieve the perfect coffee. The coffee bean is
+            our passion. From the coffee's origin and the art of roasting, right
+            up to the perfect preparation: we carry out our work with great care
+            and a love for detail. The result is a level of quality that you can
+            feel, smell and taste.
+          </p>
+          <a href="learn.html" class="index-button">Learn more</a>
+        </div>
+      </section>
+      <section class="coffee-box">
+        <div class="coffee-pics">
+          <img
+            class="coffee-img one"
+            src="IMG/INDEX/c1.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img two"
+            src="IMG/INDEX/c2.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img three"
+            src="IMG/INDEX/c3.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img four"
+            src="IMG/INDEX/c4.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img five"
+            src="IMG/INDEX/c5.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img six"
+            src="IMG/INDEX/c6.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img seven"
+            src="IMG/INDEX/c7.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img eight"
+            src="IMG/INDEX/c8.jpg"
+            alt="Coffee picture"
+          />
+          <img
+            class="coffee-img nine"
+            src="IMG/INDEX/c9.jpg"
+            alt="Coffee picture"
+          />
+        </div>
+        <div class="coffee-text-box">
+          <p class="coffee-title">Coffee is just like life.</p>
+          <p class="coffee-text">
+            But our coffee is also personal. And the right way to make it is how
+            you like it best. That being said, we encourage you to experiment
+            with different roasts, origins, or preparation methods.
+          </p>
+          <a href="shop.html" class="index-button">buy now &rarr;</a>
+        </div>
+      </section>
+      <section class="location-box">
+        <img class="location-img" src="img/INDEX/location.jpg" alt="Cafe" />
+        <div class="text-button">
+          <p class="location-title">OUR CAFÉ</p>
+          <p class="location-text">
+            Caimac Café offers a unique coffee house environment unlike any
+            other in New York. We are not only a place to drop in and get your
+            morning cup of coffee (although you are more than welcome to do
+            that), we are a place where you can sit down and enjoy that
+            tailor-made cup of bliss.
+          </p>
+          <a href="contact.html" class="index-button">FIND US</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-box">
+      <section class="footer-logo-box">
+        <img src="./ICON/PLW.png" alt="Caimac Logo" class="footer-PL" />
+        <img src="./ICON/LW.png" alt="CAIMAC COFFEE" class="footer-WL" />
+      </section>
+      <section class="footer-newsletter">
+        <label for="newsEmail" class="footer-item">
+          SIGN UP FOR OUR DELICIOUS NEWSLETTER
+        </label>
+        <input
+          class="input-email"
+          type="email"
+          id="newsEmail"
+          placeholder="GET THE LATEST FROM CAIMAC COFFEE"
+        />
+        <button class="content-button btn-news" type="submit">SUBSCRIBE</button>
+      </section>
+      <div class="divider one">&#9632;</div>
+      <section class="footer-menu-box">
+        <a href="./index.html" class="footer-item">HOME</a>
+        <a href="./learn.html" class="footer-item">LEARN</a>
+        <a href="./shop.html" class="footer-item">SHOP</a>
+        <a href="./contact.html" class="footer-item">CONTACT</a>
+      </section>
+      <div class="divider two">&#9632;</div>
+      <section class="footer-policy-box">
+        <a href="#" class="footer-item">PRIVACY POLICY</a>
+        <a href="#" class="footer-item">TERMS OF SALE</a>
+        <a href="#" class="footer-item">TERMS OF USE</a>
+      </section>
+      <div class="divider three">&#9632;</div>
+      <p class="copyright footer-item">&copy; CAIMAC COFFEE 2022</p>
+    </footer>
+    <nav class="back-top empty">
+      <a class="back-top-btn" href="#top">
+        <img class="back-top-img" src="./ICON/AW.png" alt="GO UP" />
+      </a>
+    </nav>
+    <script src="./javascript/all.js" type="module"></script>
+    <script src="./javascript/newsad.js" type="module"></script>
   </body>
 </html>

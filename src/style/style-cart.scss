@@ -1,0 +1,37 @@
+@use "../mixin.scss" as *;
+
+:root {
+  --scroll-color: #fff;
+  --body-bck-color: #000;
+  --navmenu-top: 2.45rem;
+  --menu-link-color: #fff;
+  --hambmenu-color: #fff;
+  --side-menu-bck-color: #000;
+  --button-bcg-color: #fff;
+  --button-color: #000;
+  --navbar-border-color: #fff;
+  --footer-color: #fff;
+  --shopbag-color: #fff;
+}
+.shop-cart {
+  width: 5rem;
+  height: auto;
+}
+.cart-title {
+  @include font-details(#fff, "bc-medium", 2rem, uppercase);
+}
+main {
+  margin-block: 1rem;
+  @include center-box();
+  gap: 1rem;
+}
+.empty-cart {
+  @include center-box();
+  gap: 1rem;
+  .cart-subtitle {
+    @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
+  }
+  .content-button {
+    width: 11.9rem;
+  }
+}

@@ -1,0 +1,47 @@
+@use "../mixin.scss" as *;
+
+:root {
+  --product-size: 18rem;
+}
+@mixin before-style($image) {
+  content: "";
+  background-image: $image;
+  width: var(--product-size);
+  height: var(--product-size);
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.product-box {
+  div {
+    &.AB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-A.png));
+    }
+    &.BB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-B.png));
+    }
+    &.DB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-D.png));
+    }
+    &.EB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-E.png));
+    }
+    &.FB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-F.png));
+    }
+    &.HB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-H.png));
+    }
+    &.TB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-T.png));
+    }
+    &.UB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-U.png));
+    }
+    &.VB::before {
+      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-V.png));
+    }
+  }
+}
