@@ -80,34 +80,34 @@
       width: 8rem;
       filter: drop-shadow(0.15rem 0 #000) drop-shadow(-0.15rem 0 #000);
     }
-    .check {
-      position: absolute;
-      transform: translate(5.5rem, -6rem);
-      display: inline-block;
-      width: 4rem;
-      height: 4rem;
-      &::before {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 50%;
-        width: 0.5rem;
-        background-color: #000;
-        content: "";
-        transform: translateX(10px) rotate(-45deg);
-        transform-origin: left bottom;
-      }
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 0.5rem;
-        width: 100%;
-        background-color: #000;
-        content: "";
-        transform: translateX(10px) rotate(-45deg);
-        transform-origin: left bottom;
-      }
-    }
+  }
+}
+.check.active {
+  position: absolute;
+  transform: translate(5.5rem, -6rem);
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 0.5rem;
+    background-color: #000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.5rem;
+    width: 100%;
+    background-color: #000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
   }
 }
