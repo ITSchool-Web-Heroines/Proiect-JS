@@ -173,16 +173,17 @@ button.btn-close {
     z-index: 1;
     padding-inline-end: 1.5rem;
   }
+  .bar {
+    display: block;
+    width: 1.56rem;
+    height: 0.2rem;
+    margin: 0.3rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--hambmenu-color);
+  }
 }
-.bar {
-  display: block;
-  width: 1.56rem;
-  height: 0.2rem;
-  margin: 0.3rem auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: var(--hambmenu-color);
-}
+
 /* MEDIA QUERY */
 @media (max-width: 900px) {
   .nav-menu.active {
