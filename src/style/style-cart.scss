@@ -32,6 +32,7 @@ main {
     @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
   }
   .content-button {
-    width: 11.9rem;
+    width: 13rem;
+    text-align: center;
   }
 }

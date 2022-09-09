@@ -118,9 +118,6 @@ main {
 }
 
 @media (min-width: 600px) {
-  :root {
-    --product-size: 18rem;
-  }
   main {
     grid-template-columns: 1fr 1fr;
     column-gap: 0;
@@ -141,15 +138,8 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 720px) {
-  :root {
-    --product-size: 20rem;
-  }
-}
+
 @media (min-width: 900px) {
-  :root {
-    --product-size: 18rem;
-  }
   .shop-title {
     font-size: 2.5rem;
   }
