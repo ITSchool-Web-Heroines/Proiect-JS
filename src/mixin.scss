@@ -1,3 +1,6 @@
+:root {
+  --product-size: 18rem;
+}
 @mixin center-box {
   display: grid;
   justify-items: center;

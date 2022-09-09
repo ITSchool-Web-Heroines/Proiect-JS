@@ -36,7 +36,8 @@ main {
   .VB {
     @include center-box();
     &:hover::before,
-    &:focus::before {
+    &:focus::before,
+    &:focus-within::before {
       opacity: 1;
     }
   }
@@ -115,11 +116,7 @@ main {
     }
   }
 }
-@media (min-width: 420px) {
-  :root {
-    --product-size: 22rem;
-  }
-}
+
 @media (min-width: 600px) {
   :root {
     --product-size: 18rem;

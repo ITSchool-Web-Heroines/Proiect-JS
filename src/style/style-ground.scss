@@ -1,8 +1,5 @@
 @use "../mixin.scss" as *;
 
-:root {
-  --product-size: 18rem;
-}
 @mixin before-style($image) {
   content: "";
   background-image: $image;
