@@ -54,7 +54,11 @@
   inset-inline: 0;
   transition: all 0.5s;
 }
+.added-bag-box {
+  display: none;
+}
 .added-bag-box.active {
+  display: block;
   position: fixed;
   inset-block-start: 0;
   inset-inline: 0;

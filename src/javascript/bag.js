@@ -8,6 +8,6 @@ addToCartButtons.forEach(addToCartButton => {
     setTimeout(() => {
       addedBackground.classList.remove("active");
       addedBox.classList.remove("active");
-    }, 3000);
+    }, 2000);
   });
 });
