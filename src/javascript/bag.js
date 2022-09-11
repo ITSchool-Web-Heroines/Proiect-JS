@@ -1,8 +1,8 @@
 const addToCartButtons = document.querySelectorAll(".cart-button");
+const addedBackground = document.querySelector(".added-background");
+const addedBox = document.querySelector(".added-bag-box");
+const checkSign = document.querySelector(".check");
 addToCartButtons.forEach(addToCartButton => {
-  const addedBackground = document.querySelector(".added-background");
-  const addedBox = document.querySelector(".added-bag-box");
-  const checkSign = document.querySelector(".check");
   addToCartButton.addEventListener("click", () => {
     addedBackground.classList.add("active", "fade-in");
     addedBox.classList.add("active", "fade-in");

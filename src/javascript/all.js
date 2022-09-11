@@ -13,7 +13,6 @@ navLink.forEach(event =>
   })
 );
 // SCROLL ARROW UP
-const scrollPage = window.scrollY;
 window.addEventListener("scroll", () => {
   const scrollPage = window.scrollY;
   const arrowUp = document.querySelector(".back-top");
