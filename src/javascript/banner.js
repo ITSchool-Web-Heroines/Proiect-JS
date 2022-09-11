@@ -15,8 +15,5 @@ window.addEventListener("scroll", () => {
   if (scrollPage > 5) {
     navMenu.style.top = "0rem";
     banner.style.display = "none";
-  } else {
-    banner.style.display = "flex";
-    navMenu.style.top = "var(--navmenu-top)";
   }
 });
