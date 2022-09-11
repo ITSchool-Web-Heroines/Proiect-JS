@@ -106,9 +106,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover,
-  &:focus,
-  &:focus-within {
+  &:hover {
     justify-content: flex-start;
     .bag {
       inset-inline-start: 6.5rem;
@@ -156,5 +154,139 @@ main {
 @media (min-width: 1200px) {
   :root {
     --product-size: 21rem;
+  }
+}
+
+// ADDED TO CART
+.added-background.active {
+  background-image: radial-gradient(circle, #fff 30%, transparent 120%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  transition: all 0.5s;
+}
+.added-bag-box {
+  display: none;
+}
+.added-bag-box.active {
+  animation-name: bag-ani;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  display: block;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  transition: all 5s;
+  .added-bag {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 1rem;
+    .added-img {
+      position: fixed;
+      transition: 5s;
+      width: 8rem;
+      filter: drop-shadow(0.15rem 0 #000) drop-shadow(-0.15rem 0 #000);
+    }
+  }
+}
+
+.check.active {
+  animation-name: check-ani;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  position: absolute;
+  transform: translate(5.5rem, -6rem);
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 0.5rem;
+    background-color: #000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.5rem;
+    width: 100%;
+    background-color: #000;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+  }
+}
+@keyframes check-ani {
+  0% {
+    transform: translate(5.5rem, 50rem) scale(200%) rotate(360deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(5.5rem, 15rem) scale(1750%) rotate(270deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(5.5rem, 10rem) scale(150%) rotate(180deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(5.5rem, 5rem) scale(125%) rotate(90deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(5.5rem, -6rem) scale(100%) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes bag-ani {
+  0% {
+    transform: translateY(20rem) scale(150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(100%);
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
