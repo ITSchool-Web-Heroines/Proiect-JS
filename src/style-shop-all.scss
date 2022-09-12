@@ -157,7 +157,7 @@ main {
   .product-box {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .side-menu {
+  .side-menu-box .side-menu {
     grid-template-columns: repeat(6, 1fr);
     li:nth-child(1) {
       grid-column: 1/7;
