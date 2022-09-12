@@ -166,7 +166,7 @@ body {
   }
 }
 .shop-logo {
-  filter: drop-shadow(0rem 0 var(--shopbag-color));
+  filter: drop-shadow(0.05rem 0 var(--shopbag-color));
   width: 2rem;
   height: 2rem;
   margin-block: 0.5rem 0.2rem;
@@ -427,31 +427,16 @@ body {
   }
 }
 // ADD TO CART
+
 .counter {
-  display: none;
-}
-.counter.active {
   display: block;
   position: absolute;
-  transform: translate(1.9rem, -0.5rem);
+  transform: translate(1.9rem, -0.3rem);
   z-index: 1;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 10rem;
   background-color: var(--scroll-color);
-  @include font-details(var(--body-bck-color), "bc-bold", 0.95rem, uppercase);
+  @include font-details(var(--body-bck-color), "bc-bold", 0.8rem, uppercase);
   text-align: center;
-  animation-name: toBag-ani;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-}
-@keyframes toBag-ani {
-  0% {
-    transform: translate(1.9rem, -0.5rem) scale(500%) rotate(360deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(1.9rem, -0.5rem) scale(100%) rotate(0deg);
-    opacity: 1;
-  }
 }

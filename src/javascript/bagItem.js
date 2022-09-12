@@ -1,16 +1,30 @@
 // ADD TO CART +1
-var counter = document.querySelector(".counter");
+const counter = document.querySelector(".counter");
 const addToCartButtons = document.querySelectorAll(".cart-button");
+const bagLink = document.querySelector(".nav-menu li:nth-child(5) a");
 addToCartButtons.forEach(addToCartButton => {
   addToCartButton.addEventListener("click", () => {
-    counter.classList.add("active");
+    bagLink.classList.add("active");
   });
-  addToCartButton.addEventListener("click", event => {
-    // console.log(counter);
-    var counterValue = counter.innerHTML;
-    // console.log(counterValue);
-    var plusValue = parseInt(counterValue) + 1;
-    // console.log(plusValue);
-    counter.innerHTML = plusValue;
+  addToCartButton.addEventListener("click", () => {
+    cartNumbers();
   });
 });
+function cartNumbers() {
+  let productNumbers = localStorage.getItem("cartNumbers");
+  productNumbers = parseInt(productNumbers);
+  if (productNumbers) {
+    localStorage.setItem("cartNumbers", productNumbers + 1);
+    counter.textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem("cartNumbers", 1);
+    counter.textContent = 1;
+  }
+}
+function onLoadCartNumbers() {
+  let productNumbers = localStorage.getItem("cartNumbers");
+  if (productNumbers) {
+    counter.textContent = productNumbers;
+  }
+}
+onLoadCartNumbers();

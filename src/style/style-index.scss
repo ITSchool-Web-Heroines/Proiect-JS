@@ -284,20 +284,34 @@ section.location-box {
 @media (max-height: 550px) {
   .news-big-box {
     max-width: none;
-    width: 31rem;
+    width: 25rem;
   }
   .news-box {
     flex-direction: row;
     gap: 0rem;
+    padding: 0.5rem;
   }
   .news-img {
-    width: 8rem;
+    width: 6.3rem;
+  }
+  .text-box {
+    gap: 0.3rem;
   }
   .news-text,
   .ad-news-submit,
   .input-ad-email,
   .input-ad-name {
-    font-size: 1rem;
+    font-size: 0.85rem;
+  }
+  .input-ad-email,
+  .input-ad-name {
+    width: 10rem;
+  }
+  .news-btn-x {
+    @include font-details(#000, Arial, 1rem, uppercase);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-block-start: 0.2rem;
   }
 }
 @media (min-width: 600px) {
