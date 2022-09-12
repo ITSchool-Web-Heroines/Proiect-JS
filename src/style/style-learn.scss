@@ -30,10 +30,10 @@ main {
 .roast-section,
 .roast-types-box {
   width: 100vw;
+  place-items: center;
   display: grid;
-  justify-items: center;
-  align-content: center;
   align-items: center;
+  align-content: center;
 }
 .source-section,
 .roast-section {
@@ -137,6 +137,7 @@ a.about-subtitle {
   transform: rotate(180deg);
 }
 /* ABOUT TEXT */
+
 div.about-text {
   display: none;
 }
@@ -161,6 +162,7 @@ div.about-text.active {
   }
 }
 /* ROAST */
+
 .roast-types-box {
   padding: 0rem 0.7rem;
   grid-template-columns: 60% 40%;

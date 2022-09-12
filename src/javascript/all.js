@@ -5,13 +5,13 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
-const navLink = document.querySelectorAll(".nav-link");
-navLink.forEach(event =>
-  event.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-  })
-);
+// MENU HIDE ON SCROLL
+window.addEventListener("scroll", () => {
+  const scrollPage = window.scrollY;
+  if (scrollPage > 4) {
+    navMenu.classList.remove("active");
+  }
+});
 // SCROLL ARROW UP
 window.addEventListener("scroll", () => {
   const scrollPage = window.scrollY;
