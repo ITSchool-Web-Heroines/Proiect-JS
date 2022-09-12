@@ -66,8 +66,12 @@ main {
     display: grid;
     justify-items: center;
     align-items: center;
-    .side-link:hover {
-      box-shadow: inset 0rem -0.7rem 0rem -0.6rem var(--footer-color);
+    .side-link {
+      &:hover,
+      &:focus,
+      &:focus-within {
+        box-shadow: inset 0rem -0.7rem 0rem -0.6rem var(--footer-color);
+      }
     }
     li,
     a {
@@ -114,7 +118,16 @@ main {
     }
   }
 }
-
+@media (min-width: 460px) {
+  .side-menu-box .side-menu {
+    gap: 0.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    li:nth-child(1) {
+      grid-column: 1/4;
+    }
+  }
+}
 @media (min-width: 600px) {
   main {
     grid-template-columns: 1fr 1fr;

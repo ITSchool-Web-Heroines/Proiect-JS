@@ -114,7 +114,6 @@ p.location-title {
   font-size: 1.3rem;
   position: relative;
   transition: background-color ease-in 0.2s;
-
   &:hover,
   &:focus,
   &:focus-within {
@@ -211,7 +210,6 @@ section.location-box {
 }
 .news-box {
   border: 0.1rem solid #000;
-  // color: #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -270,10 +268,14 @@ section.location-box {
   width: 7rem;
   transition: 0.3s;
 }
-.ad-news-submit:hover {
-  background-color: #fff;
-  box-shadow: 0 0 0 0.1rem #000 inset;
-  color: #000;
+.ad-news-submit {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: #fff;
+    box-shadow: 0 0 0 0.1rem #000 inset;
+    color: #000;
+  }
 }
 .news-btn-x:hover {
   background-color: #000;
