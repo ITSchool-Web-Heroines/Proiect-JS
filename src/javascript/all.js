@@ -10,6 +10,7 @@ window.addEventListener("scroll", () => {
   const scrollPage = window.scrollY;
   if (scrollPage > 4) {
     navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
   }
 });
 // SCROLL ARROW UP

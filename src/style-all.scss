@@ -165,12 +165,6 @@ body {
     }
   }
 }
-.shop-logo {
-  filter: drop-shadow(0.05rem 0 var(--shopbag-color));
-  width: 2rem;
-  height: 2rem;
-  margin-block: 0.5rem 0.2rem;
-}
 /* HAMBURGER MENU */
 .hamburger {
   padding: 0;
@@ -186,19 +180,42 @@ body {
     width: 1.56rem;
     height: 0.2rem;
     margin: 0.3rem auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
     background-color: var(--hambmenu-color);
   }
 }
+.hamburger.active span:nth-child(1) {
+  display: none;
+}
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  background-color: var(--hambmenu-color);
+  position: relative;
+  width: 1.7rem;
+  height: 0.3rem;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(90deg);
+}
 
-/* MEDIA QUERY */
-@media (max-width: 900px) {
-  .nav-menu.active {
-    inset-inline-end: 0;
-    z-index: 1;
-    box-shadow: -0.05rem 0 0.3rem 0 #000;
-  }
+// ADD TO BAG
+.shop-logo {
+  filter: drop-shadow(0.05rem 0 var(--shopbag-color));
+  width: 2rem;
+  height: 2rem;
+  margin-block: 0.5rem 0.2rem;
+}
+.counter {
+  display: block;
+  position: absolute;
+  transform: translate(1.9rem, -0.3rem);
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 10rem;
+  background-color: var(--scroll-color);
+  @include font-details(var(--body-bck-color), "bc-bold", 0.8rem, uppercase);
+  text-align: center;
 }
 
 /* FOOTER */
@@ -324,7 +341,7 @@ body {
   display: none;
 }
 .fade-in {
-  animation-name: fade-in 0.35s ease-in;
+  animation: fade-in 0.35s ease-in;
 }
 @keyframes fade-in {
   0% {
@@ -361,7 +378,14 @@ body {
   text-decoration: none;
   width: var(--top-btn-size);
 }
-
+/* MEDIA QUERY */
+@media (max-width: 900px) {
+  .nav-menu.active {
+    inset-inline-end: 0;
+    z-index: 1;
+    box-shadow: -0.05rem 0 0.3rem 0 #000;
+  }
+}
 @media (min-width: 900px) {
   .logo {
     width: 9rem;
@@ -425,18 +449,4 @@ body {
   .logo {
     width: 10rem;
   }
-}
-// ADD TO CART
-
-.counter {
-  display: block;
-  position: absolute;
-  transform: translate(1.9rem, -0.3rem);
-  z-index: 1;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 10rem;
-  background-color: var(--scroll-color);
-  @include font-details(var(--body-bck-color), "bc-bold", 0.8rem, uppercase);
-  text-align: center;
 }
