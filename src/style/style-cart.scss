@@ -13,6 +13,9 @@
   --footer-color: #fff;
   --shopbag-color: #fff;
 }
+main * {
+  @include animation-fade-in();
+}
 .shop-cart {
   width: 5rem;
   height: auto;

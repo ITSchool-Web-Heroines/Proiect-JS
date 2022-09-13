@@ -13,6 +13,11 @@
   --footer-color: #000;
   --shopbag-color: #000;
 }
+
+main * {
+  @include animation-fade-in();
+}
+
 // CONTENT
 main,
 .shop-box,
