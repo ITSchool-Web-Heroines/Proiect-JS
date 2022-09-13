@@ -11,6 +11,7 @@
   --navbar-border-color: #000;
   --footer-color: #000;
   --shopbag-color: #000;
+  --submit-form-fill: translate(-0.1rem, 5.2rem);
 }
 main {
   margin: auto;
@@ -24,7 +25,7 @@ main * {
   @include animation-fade-in();
 }
 section,
-form {
+#contact-form {
   display: grid;
   gap: 0.5rem;
 }

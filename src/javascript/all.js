@@ -25,3 +25,15 @@ window.addEventListener("scroll", () => {
     arrowUp.classList.remove("fade-in");
   }
 });
+
+// SUBSCRIBE EVENT
+const submitButtons = document.querySelectorAll(`button[type="submit"]`);
+const submitBox = document.querySelector(".submit-background");
+submitButtons.forEach(submitButton => {
+  submitButton.addEventListener("click", () => {
+    submitBox.classList.add("fill");
+    setTimeout(() => {
+      submitBox.classList.remove("fill");
+    }, 3500);
+  });
+});

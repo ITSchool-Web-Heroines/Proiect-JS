@@ -12,6 +12,7 @@
   --button-color: #000;
   --footer-color: #fff;
   --shopbag-color: #fff;
+  --submit-form-fill: translate(-0.1rem, 4.7rem);
 }
 
 /* MENU - SUBMENU */
@@ -49,19 +50,14 @@ div.subtitle-box {
   align-content: center;
 }
 p.subtitle.title {
+  @include animation-fade-in();
   font-size: 2rem;
   padding-block-end: 0rem;
 }
 p.subtitle.sub-title {
+  @include animation-fade-in();
   font-size: 1.7rem;
 }
-p.subtitle.title.title-ani {
-  @include animation-title();
-}
-p.subtitle.sub-title.title-ani {
-  @include animation-title();
-}
-
 /* MAIN CONTENT */
 main {
   display: grid;
