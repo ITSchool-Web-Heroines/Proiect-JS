@@ -68,10 +68,10 @@ main {
 
 a.shop-subtitle {
   &::after {
-    inset-block-end: 0.1rem;
+    inset-block-end: 0rem;
   }
   &::before {
-    inset-block-start: 0.1rem;
+    inset-block-start: 0rem;
   }
 }
 

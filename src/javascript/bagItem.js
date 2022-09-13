@@ -11,20 +11,20 @@ addToCartButtons.forEach(addToCartButton => {
   });
 });
 function cartNumbers() {
-  let productNumbers = localStorage.getItem("cartNumbers");
+  let productNumbers = sessionStorage.getItem("cartNumbers");
   productNumbers = parseInt(productNumbers);
   if (productNumbers) {
-    localStorage.setItem("cartNumbers", productNumbers + 1);
+    sessionStorage.setItem("cartNumbers", productNumbers + 1);
     counter.textContent = productNumbers + 1;
   } else {
-    localStorage.setItem("cartNumbers", 1);
+    sessionStorage.setItem("cartNumbers", 1);
     counter.textContent = 1;
   }
 }
-function onLoadCartNumbers() {
-  let productNumbers = localStorage.getItem("cartNumbers");
+function keepCartNumbers() {
+  let productNumbers = sessionStorage.getItem("cartNumbers");
   if (productNumbers) {
     counter.textContent = productNumbers;
   }
 }
-onLoadCartNumbers();
+keepCartNumbers();

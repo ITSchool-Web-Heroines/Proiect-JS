@@ -190,8 +190,16 @@ section.location-box {
   opacity: 1;
   width: 100vw;
   height: 100vh;
-  z-index: 14;
-  transition: 1s;
+  z-index: 15;
+  animation: newsletter-ani 0.5s ease-in;
+}
+@keyframes newsletter-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .news-big-box {
   opacity: 1;
@@ -204,9 +212,21 @@ section.location-box {
   width: 90vw;
   max-width: 20rem;
   background-color: #fff;
+  animation: newsletter-ani 0.8s ease-in;
 }
 .fade-box {
   opacity: 0;
+}
+.news-fade-out {
+  animation: news-fade-out 0.5s ease-in;
+}
+@keyframes news-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .news-box {
   border: 0.1rem solid #000;
@@ -281,6 +301,8 @@ section.location-box {
   background-color: #000;
   color: #fff;
 }
+
+// MEDIA QUERYS
 @media (max-height: 550px) {
   .news-big-box {
     max-width: none;
