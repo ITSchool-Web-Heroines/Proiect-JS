@@ -1,3 +1,4 @@
+@use "../mixin.scss" as *;
 :root {
   --scroll-color: #000;
   --body-bck-color: #fff;
@@ -17,6 +18,9 @@ main {
   margin: auto;
   padding: 1rem 0rem;
   gap: 1rem;
+}
+main * {
+  @include animation-fade-in();
 }
 /* SHOP SECTION */
 .shop-subtitle {

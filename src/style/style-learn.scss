@@ -1,3 +1,5 @@
+@use "../mixin.scss" as *;
+
 :root {
   --scroll-color: #fff;
   --body-bck-color: #000;
@@ -22,7 +24,10 @@ main {
   font-size: 2.5rem;
   line-height: 65%;
 }
-
+// TITLE
+main * {
+  @include animation-fade-in();
+}
 /* COMMON */
 .source-section,
 .subtitle-box,
@@ -162,7 +167,6 @@ div.about-text.active {
   }
 }
 /* ROAST */
-
 .roast-types-box {
   padding: 0rem 0.7rem;
   grid-template-columns: 60% 40%;

@@ -1,3 +1,4 @@
+@use "../mixin.scss" as *;
 :root {
   --scroll-color: #000;
   --body-bck-color: #fff;
@@ -18,6 +19,9 @@ main {
   gap: 0.5rem;
   padding-block: 1rem 0rem;
   justify-items: center;
+}
+main * {
+  @include animation-fade-in();
 }
 section,
 form {
