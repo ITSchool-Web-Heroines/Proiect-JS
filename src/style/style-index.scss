@@ -41,18 +41,26 @@ p.subtitle {
   text-transform: uppercase;
   text-align: center;
   padding-inline: 0.5rem;
-  padding-block-end: 0.5rem;
 }
 div.subtitle-box {
   width: 100%;
-  height: 8rem;
-  background-image: linear-gradient(0deg, #000 85%, #0000);
+  height: 6rem;
+  background-image: linear-gradient(0deg, #000 80%, #0000);
   display: grid;
   align-content: center;
 }
 p.subtitle.title {
   font-size: 2rem;
   padding-block-end: 0rem;
+}
+p.subtitle.sub-title {
+  font-size: 1.7rem;
+}
+p.subtitle.title.title-ani {
+  @include animation-title();
+}
+p.subtitle.sub-title.title-ani {
+  @include animation-title();
 }
 
 /* MAIN CONTENT */
@@ -186,7 +194,7 @@ section.location-box {
 /* NEWS AD */
 .news-blur {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   opacity: 1;
   width: 100vw;
   height: 100vh;
@@ -341,6 +349,12 @@ section.location-box {
     width: 100vw;
     gap: 0.5rem;
   }
+  p.subtitle.title {
+    font-size: 2.5rem;
+  }
+  p.subtitle.sub-title {
+    font-size: 2rem;
+  }
   .about-text {
     max-width: 30rem;
   }
@@ -370,10 +384,10 @@ section.location-box {
 
 @media (min-width: 900px) {
   p.subtitle.title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-  p.subtitle {
-    font-size: 2rem;
+  p.subtitle.sub-title {
+    font-size: 2.5rem;
   }
   div.subtitle-box {
     height: 10rem;

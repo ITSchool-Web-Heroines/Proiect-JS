@@ -11,3 +11,22 @@
   font-size: $size;
   text-transform: $transform;
 }
+
+@mixin animation-title {
+  background: linear-gradient(90deg, #000, #000, #fff, #fff, #fff, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  animation: animate 3s linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  @keyframes animate {
+    0% {
+      background-position: -700%;
+    }
+    100% {
+      background-position: 700%;
+    }
+  }
+}
+@mixin keyframes-animation {
+}
