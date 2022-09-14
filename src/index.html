@@ -1,23 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Proiect JavaScript</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <div class="vh-100 d-flex flex-column">
-      <header class="navbar bg-primary bg-gradient">
-        <div class="container-fluid">
-          <h1 class="navbar-brand mb-0 text-white">Proiect JavaScript</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <section id="header">
+        <div class="welcome">
+            <h1>Barabas Despina</h1>
+            <i id="bacon" class="fa-solid fa-bars"></i>
+            <nav id="meniu" class="menu">
+                <i id="dino" class="fa-solid fa-x"></i>
+                <a href="index.html" class="menu-item">Acasa</a>
+                <a href="contactpage.html" class="menu-item">Formular de contact</a>
+                <a href="" class="menu-item">Proiectele mele</a>
+            </nav>
         </div>
-      </header>
-      <main class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
-        <h2 class="display-1 text-center">15 Septembrie 2022</h2>
-      </main>
-    </div>
-  </body>
+        <div class="about-me">
+            <p>Bine ai venit pe pagina mea!</p>
+        </div>
+    </section>
+    <section class="text-box">
+        <article id="ceva" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</article>
+        <article id="orice" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</article>
+        <article id="oriunde" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</article>
+    </section>
+    <section>
+        <div class="button">
+            <button data-site="#ceva" class="btn">1</button>
+            <button data-site="#orice" class="">2</button>
+            <button data-site="#oriunde" class="">3</button>
+        </div>
+    </section>
+    <section class="picture">
+        <div class="grid-container">
+            <img src="poza1.jpg" class="first-image">
+            <img src="poza2.jpg" class="second-image">
+            <img src="poza3.jpg" class="third-image">
+            <img src="poza4.jpg" class="fourth-image">
+            <img src="porcusor.jpg" class="fifth-image">
+            <img src="pisica.jpg" class="sixth-image">
+            <img src="family.jpg" class="th-image">
+        </div>
+    </section>
+    <section id="footer">
+        <p>
+            <i class="fa-regular fa-address-book"></i>
+            Numar de telefon: 07400..
+        </p>
+        <p>
+            <i class="fa-brands fa-facebook"></i>
+            Facebook:
+        </p>
+        <p>
+            <i class="fa-regular fa-envelope"></i>
+            Mail
+        </p>
+    </section>
+    <script src="index.js"></script>
+</body>
+
 </html>
