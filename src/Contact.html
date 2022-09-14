@@ -144,21 +144,22 @@
           <p type="Message:"><input placeholder="What would you like to tell us"></input></p>
           <p id="form"></p>
           <button onclick="myFunction()">Submit</button>
-          <script>
-            function myFunction() {
-              var txt;
-              if (confirm("Are you sure you want to submit this?")) {
-                txt = "Request received!";
-              } else {
-                txt = "Request cancelled!";
-              }
-              document.getElementById("form").innerHTML = txt;
-            }
-            </script>
+          
           <div>
             <span class="Phone"></span>075 444 365
             <span class="Email"></span> faroeislands@gmail.com
           </div>
       </form>
+      <script>
+        function myFunction() {
+          var txt;
+          if (confirm("Are you sure you want to submit this?")) {
+            txt = "Request received!";
+          } else {
+            txt = "Request cancelled!";
+          }
+          document.getElementById("form").innerHTML = txt;
+        }
+        </script>
   </body>
 </html>
