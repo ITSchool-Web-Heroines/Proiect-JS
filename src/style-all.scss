@@ -56,18 +56,27 @@ body {
     url("./FONT/BarlowCondensed-Thin.ttf") format("truetype");
   font-weight: 100;
 }
+// INPUT STYLE
+input[type="text"] {
+  text-transform: uppercase;
+}
+input[type="email"] {
+  text-transform: lowercase;
+  &::placeholder {
+    text-transform: uppercase;
+  }
+}
 
 // SUBMIT BOX
 .submit-background {
-  // opacity: 0;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   z-index: 20;
+  position: fixed;
   inset-block-start: -100%;
   transition: top 0.2s, opacity 0.2s;
   background-color: transparent;
-  position: fixed;
-  inset-block-start: 0;
   inset-inline: 0;
   display: flex;
   align-items: center;

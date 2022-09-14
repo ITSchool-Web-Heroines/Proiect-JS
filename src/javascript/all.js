@@ -27,13 +27,26 @@ window.addEventListener("scroll", () => {
 });
 
 // SUBSCRIBE EVENT
-const submitButtons = document.querySelectorAll(`button[type="submit"]`);
+
+// function clearInput(formInput) {
+//   console.log(formInput.value);
+//   formInput.value = "";
+// }
+const formInputs = document.querySelectorAll("input");
+const messageInput = document.querySelector("textarea");
+const submitForms = document.querySelectorAll("form");
 const submitBox = document.querySelector(".submit-background");
-submitButtons.forEach(submitButton => {
-  submitButton.addEventListener("click", () => {
+submitForms.forEach(submitForm => {
+  submitForm.addEventListener("submit", event => {
+    event.preventDefault();
     submitBox.classList.add("fill");
     setTimeout(() => {
       submitBox.classList.remove("fill");
     }, 3500);
+    formInputs.forEach(formInput => {
+      console.log(formInput.value);
+      formInput.value = "";
+    });
+    messageInput.value = "";
   });
 });
