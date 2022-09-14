@@ -229,23 +229,14 @@ a:nth-child(5):hover ~ .animation {
 }
 
 @media screen and (min-width: 400px) {
-  .flip span {
-    font-size: 2rem;
-    flex: none;
-    align-self: stretch;
+  h1 {
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .flip span {
-    margin: 2rem;
-    position: relative;
-    display: inline-block;
-    font-size: 6rem;
-    color: black;
-    text-transform: uppercase;
-    animation: flip 2s infinite;
-    animation-delay: calc(0.2s * var(--i));
+  h1 {
+    font-size: 3rem;
   }
 
   .cards {
