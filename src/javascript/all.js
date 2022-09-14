@@ -43,3 +43,10 @@ submitForms.forEach(submitForm => {
     });
   });
 });
+
+// ON LOAD WINDOW
+const loader = document.querySelector("#preloader");
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+  console.log("loaded");
+});
