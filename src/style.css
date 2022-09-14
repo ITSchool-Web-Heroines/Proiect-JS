@@ -89,7 +89,7 @@ a:nth-child(5):hover ~ .animation {
   margin: 2rem;
   position: relative;
   display: inline-block;
-  font-size: 6rem;
+  font-size: 4rem;
   color: black;
   text-transform: uppercase;
   animation: flip 2s infinite;
