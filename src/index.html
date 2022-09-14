@@ -233,6 +233,7 @@
     </footer>
     <script>
 
+
       function msg() {
                 alert("Working on it!");
               }
@@ -264,6 +265,13 @@
           this.className += " active";
         });
       }
+
+      const loader = document.querySelector("preload");
+      window.addEventListener("load", () => {
+        loader.style.display = "none";
+        console.log("loaded");
+      });
+      
     </script>
   </body>
 </html>
