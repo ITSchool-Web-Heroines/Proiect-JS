@@ -1,14 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Tema Bootstrap</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.scss" />
-    <script type="module" src="./index.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400;1,700&family=Lato:wght@700&family=Libre+Baskerville:ital@1&family=Noto+Sans+Balinese:wght@500&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
   </head>
   <body>
-    <h1>Proiect cu JavaScript</h1>
+    <div class="hero">
+      <header class="navbar">
+        <img src="../pictures/logo.svg" alt="" class="logo" />
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Acasa</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicii.html" class="nav-link">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link-special">Contact</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <div class="text">
+        <div class="divider"></div>
+        <h1 class="title">Servicii de Detailing profesionale</h1>
+        <p class="subtitle">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum esse
+          officiis, dolore amet veniam praesentium magni, officia inventore nam
+          tempora autem deleniti quo ex. Vel quae sequi dolorum accusantium eos.
+        </p>
+        <div class="btns">
+          <a href="contact.html" class="btn reserve">Programează-te</a>
+          <a href="servicii.html" class="btn see-more">Vezi serviciile</a>
+        </div>
+      </div>
+
+      <div class="margin"></div>
+    </div>
+    <section class="exp">
+      <div class="exp-details">
+        <h2 class="number">10<span class="nmb-s">+</span></h2>
+        <h3 class="title exp">Ani de experiență</h3>
+      </div>
+      <div class="exp-details">
+        <h2 class="number">50K<span class="nmb-s">+</span></h2>
+        <h3 class="title exp">Clienți multumiți</h3>
+      </div>
+      <div class="exp-details">
+        <h2 class="number">99<span class="nmb-s">%</span></h2>
+        <h3 class="title exp">Recenzii pozitive</h3>
+      </div>
+    </section>
+    <section class="services">
+      <div class="text-divider">
+        <div class="blue-divider subtitle"></div>
+        <div class="subtitle text">Servicii</div>
+      </div>
+      <h2 class="title-details">Oferim o gamă diversificată de servicii</h2>
+      <section class="slider">
+        <div class="image-container">
+          <img src="../pictures/interior.jpg" alt="" />
+          <div class="caption">
+            <a href="interior.html"><h3 class="h3">Detailing interior</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img src="../pictures/exterior.jpg" alt="" />
+          <div class="caption">
+            <a href="exterior.html"><h3 class="h3">Detailing exterior</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img src="../pictures/protectie.jpg" alt="" />
+          <div class="caption">
+            <a href="#"><h3 class="h3">Protecție ceramică</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </section>
+      <div class="btns">
+        <a href="servicii.html" class="btn see-more color">Vezi serviciile</a>
+      </div>
+    </section>
+    <section class="why-us">
+      <div>
+        <img src="../pictures/why-us.png" alt="" class="why-img" />
+      </div>
+
+      <div class="why-text">
+        <h2 class="title">De ce suntem diferiți?</h2>
+        <p class="subtitle">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+          ad ea corporis recusandae doloribus. Excepturi voluptatum cupiditate
+          quae veritatis officiis nulla officia et mollitia vero, aspernatur
+          quisquam magni earum sunt.
+        </p>
+        <div class="space"></div>
+        <div class="why-flex">
+          <img
+            src="../pictures/hourglass_top_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+            class="icon"
+          />
+          <div class="text-icon">
+            <h3>Peste 10 de experiență</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              tenetur pariatur incidunt, sapiente natus praesentium.
+            </p>
+          </div>
+        </div>
+        <div class="why-flex">
+          <img
+            src="../pictures/auto_awesome_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+            class="icon"
+          />
+          <div class="text-icon">
+            <h3>Produse de calitate folosite</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              tenetur pariatur incidunt, sapiente natus praesentium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="location">
+      <h3 class="title-details loc">Te așteptăm în locațiile noastre</h3>
+      <p class="subtitle black">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iste
+        nisi assumenda dignissimos aspernatur veritatis delectus.
+      </p>
+      <div class="loc-img">
+        <div class="image-container">
+          <img src="../pictures/locatie1.jpg" alt="" class="loc" />
+          <div class="caption">
+            <a href="#"
+              ><h3 class="h3 loc">București - Bd. Paul Teodorescu 4</h3></a
+            >
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="../pictures/locatie2.jpg" alt="" class="loc" />
+          <div class="caption">
+            <a href="#"><h3 class="h3 loc">Ploiești - Bd. 1 Mai</h3></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <img src="../pictures/facebook.svg" alt="" />
+      <img src="../pictures/instagram.svg" alt="" />
+      <img src="../pictures/linkedin.svg" alt="" />
+      <img src="../pictures/twitter.svg" alt="" />
+    </footer>
   </body>
 </html>

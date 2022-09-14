@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acasa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,400;1,700&family=Lato:wght@700&family=Libre+Baskerville:ital@1&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <script type="module" src="script.js"></script>
+    <script type="module" src="contact.js"></script>
+  </head>
+  <body>
+    <div class="hero">
+      <header class="navbar">
+        <img src="../pictures/logo.svg" alt="" class="logo" />
+        <nav>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Acasa</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicii.html" class="nav-link">Servicii</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link-special">Contact</a>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <section class="main">
+        <h1 class="title">Realizează o programare</h1>
+        <p class="subtitle">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nisi
+          ut aut pariatur maiores.
+        </p>
+        <div class="cards">
+          <div class="left-card">
+            <form action="" id="form">
+              <div class="section-flex">
+                <div class="flex">
+                  <div class="input-control">
+                    <label for="nume">Nume</label>
+                    <input type="text" name="Nume" id="nume" />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                    <label for="nume-serviciu">Serviciul dorit</label>
+                    <select name="serviciu" id="nume-serviciu" class="choose">
+                      <option value="">Selecteaza serviciul--</option>
+                      <option value="Detailing interior">
+                        Detailing interior
+                      </option>
+                      <option value="Detailing exterior">
+                        Detailing exterior
+                      </option>
+                      <option value="Protectie ceramica">
+                        Protectie ceramică
+                      </option>
+                    </select>
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                    <label for="data">Data</label>
+                    <input type="date" name="Data" id="data" />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                    <label for="ora">Ora</label>
+                    <input type="time" name="ora" id="ora" />
+                    <div class="error"></div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="input-control">
+                    <label for="telefon">Numar de telefon</label>
+                    <input type="tel" name="Numar de telefon" id="telefon" />
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                    <label for="locatie">Locatie</label>
+                    <select name="locatie" id="locatie" class="choose">
+                      <option value="">Selecteaza locatia--</option>
+                      <option value="Bucuresti">
+                        București - Bd. Paul Teodorescu 4
+                      </option>
+                      <option value="Detailing exterior">
+                        Ploiești - Bd. 1 Mai
+                      </option>
+                    </select>
+                    <div class="error"></div>
+                  </div>
+                  <div class="input-control">
+                    <label for="detalii">Informatii</label>
+                    <textarea
+                      name="text"
+                      id="info"
+                      cols="1"
+                      rows="8"
+                    ></textarea>
+                    <div class="error"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-send title">Trimite</button>
+            </form>
+          </div>
+          <div class="right-card">
+            <h2 class="title contact">CONTACT</h2>
+            <div class="group">
+              <div class="group-icon">
+                <img src="../pictures/phone_icon.png" alt="" class="icon2" />
+                <p class="text">0745 123 123</p>
+              </div>
+
+              <div class="group-icon">
+                <img src="../pictures/email_icon.png" alt="" class="icon2" />
+                <p class="text">detailing@gmail.com</p>
+              </div>
+              <div class="group-icon">
+                <img src="../pictures/location_icon.png" alt="" class="icon2" />
+                <p class="text">Bucuresti - Bd. Paul Teodorescu 4</p>
+              </div>
+              <div class="group-icon">
+                <img src="../pictures/location_icon.png" alt="" class="icon2" />
+                <p class="text">Ploiesti - Bd. 1 Mai</p>
+              </div>
+              <div class="social_media">
+                <a href="https://facebook.com/">
+                  <img src="../pictures/facebook.svg" alt="" class="sm-icon" />
+                </a>
+                <a href="https://instagram.com">
+                  <img src="../pictures/instagram.svg" alt="" class="sm-icon" />
+                </a>
+                <a href="https://twitter.com">
+                  <img src="../pictures/twitter.svg" alt="" class="sm-icon" />
+                </a>
+                <a href="https://linkedin.com">
+                  <img src="../pictures/linkedin.svg" alt="" class="sm-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 2rem"></div>
+      </section>
+    </div>
+    <footer>
+      <img src="../pictures/facebook.svg" alt="" />
+      <img src="../pictures/instagram.svg" alt="" />
+      <img src="../pictures/linkedin.svg" alt="" />
+      <img src="../pictures/twitter.svg" alt="" />
+    </footer>
+  </body>
+</html>
