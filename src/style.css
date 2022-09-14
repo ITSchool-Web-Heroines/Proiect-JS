@@ -8,15 +8,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.preload {
-  background: #000 url(./preview.gif) no-repeat center center;
-  background-size: 50rem;
-  height: 100vh;
-  width: 100%;
-  z-index: 100;
-  position: fixed;
-}
-
 h1 {
   margin-block-start: 13rem;
   margin-block-end: 2rem;
