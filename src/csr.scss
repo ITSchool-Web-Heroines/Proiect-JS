@@ -1,0 +1,437 @@
+@font-face {
+    font-family: customFont;
+    src: url("Reey-Regular.otf") format('opentype')
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-image: url(./img/photo-1578662996442-48f60103fc96.jpeg);
+    background-size: contain;
+}
+
+.menu {
+    display: grid;
+    background: linear-gradient(rgb(0, 0, 0), rgb(20, 20, 20), rgb(9, 9, 9), rgb(21, 20, 20), rgb(0, 0, 0));
+    margin-block-start: 1rem;
+    padding-inline: 2rem;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+
+}
+
+.logo {
+    grid-row: 1/2;
+    padding-inline-start: 3rem;
+}
+
+.navbarlogo {
+    margin-block-start: 1rem;
+    margin-block-end: 0rem;
+    height: 4rem;
+    width: 8rem;
+}
+
+.nav {
+    grid-row: 1/2;
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    justify-content: left;
+    gap: 1.8rem;
+    font-size: 1.2rem;
+    color: white;
+    padding-inline: 0;
+    padding-block: 0.7rem;
+    margin-block-end: 0rem;
+    margin-inline: 0;
+}
+
+.nav a {
+    font-family: customFont;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0.2rem 0.3rem black;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item::after {
+    height: 0.15rem;
+    width: 0;
+    inset-inline-start: 0;
+    inset-block-end: -0.6rem;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+/*Board*/
+.board {
+    display:grid;
+    margin-block-start: 0rem;
+    margin-inline: 2rem;
+}
+.cssphoto1 {
+    grid-area: 1/5/6/9;
+    width:44vw;
+    height:60vh;
+  
+}
+.cssphoto2 {
+grid-area: 1/1/3/5;
+width:35vw;
+height:20vh;
+}
+.cssphoto3 {
+grid-area: 3/1/6/3;
+width:50vw;
+height: 40vh;
+}
+.cssphoto4 {
+grid-area:1/3/1/2;
+    width: 15vw;
+    height: 20vh;
+}
+
+ /*Section 1*/
+#section1 {
+    margin-block-start: 0rem;
+    margin-inline: 2rem;
+}
+.motto {
+    margin-inline: 5rem;
+}
+.quote1 {
+    color:white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+}
+.quote2 {
+    color:white;
+    font-family: customFont;
+    font-size: 4vh;
+    text-align: center;
+}
+.info {
+    padding-block-end: 3rem;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    text-align: center;
+}
+/*Section 2*/
+.section2 {
+    margin-inline: 2rem;
+    display:grid;
+}
+.photo1 {
+    grid-column: 1/2;
+    grid-row:1/4;
+    width:42.5vw;
+    height:30vw;
+    border-radius: 50%;
+}
+.title1 {
+    color: white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+    grid-column:2/3;
+    grid-row:1/2;
+    padding-block-start: 5rem;
+}
+.p1 {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    padding-inline:2rem;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    margin-top: -60px;
+}
+/*Section 3*/
+.section3 {
+    margin-inline: 2rem;
+    display: grid;
+}
+.title2 {
+    color: white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row:1/2;
+    padding-block-start: 5rem;
+}
+.p2 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    padding-inline: 2rem;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-top:-60px;
+}
+.photo2 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 45vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+/*Section 4*/
+.section4 {
+    margin-inline: 2rem;
+    display: grid;
+}
+.photo3 {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 42.5vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+.title3 {
+    color: white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+    padding-block-start: 5rem;
+}
+.p3 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    padding-inline: 2rem;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    margin-top: -60px;
+}
+/*Section 5*/
+.section5 {
+    margin-inline: 2rem;
+    display: grid;
+}
+
+.photo4 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 45vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+
+.title4 {
+    color: white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+    padding-block-start: 5rem;
+}
+
+.p4 {
+    padding-block-start: 0rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    padding-inline: 2rem;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    margin-top: -60px;
+}
+/*Section 6*/
+.section6 {
+    margin-inline: 2rem;
+    display: grid;
+}
+
+.photo5 {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 42.5vw;
+    height: 30vw;
+    border-radius: 45%;
+    opacity:0.7;
+}
+
+.title5 {
+    color: white;
+    font-family: customFont;
+    font-size: 5vh;
+    text-align: center;
+    padding-block-start: 5rem;
+    
+}
+
+.p5 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+    padding-inline: 2rem;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    margin-top: -60px;
+}
+#section2{
+    background: url(./img/top-view-lipsticks-frame-with-copy-space.jpg);
+    background-size: cover;
+    margin-block-start: 0rem;
+    display:grid;
+}
+.yes {
+    background: rgba(152, 148, 151, 0.5);
+    grid-column: 1/3;
+    color:white;
+    display:grid;
+}
+.no {
+    background: rgba(84, 80, 80, 0.5);
+    grid-column: 3/5;
+    color:white;
+    display:grid;
+}
+.hyes {
+    font-family: customFont;
+    text-align: center;
+    grid-column: 1/3;
+    font-size:5vh;
+}
+.infoyes1{
+    grid-column:1/2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.infoyes2 {
+    grid-column:2/3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hno {
+    font-family: customFont;
+    text-align: center;
+    grid-column: 1/3;
+    font-size: 5vh;
+}
+.infono1 {
+    grid-column: 1/2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.infono2 {
+    grid-column: 2/3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#section3{
+    margin-inline: 2rem;
+    margin-block-start: 2.5rem;
+}
+.transparency {
+    font-family:customFont;
+    color:white;
+    font-size:5vh;
+    text-align: center;
+}
+.transparencyinfo {
+    font-family: customFont;
+        color: white;
+        font-size: 2.5vh;
+        text-align: center;
+        padding-block-end: 3rem;
+}
+
+/*Footer*/
+#footer {
+    margin-block-end: 0rem;
+    background: linear-gradient(rgb(0, 0, 0), rgb(20, 20, 20), rgb(9, 9, 9), rgb(21, 20, 20), rgb(0, 0, 0));
+}
+
+.row1 {
+    padding-inline: 2rem;
+    display: grid;
+}
+
+.column1 {
+    grid-column: 1/2;
+    text-align: center;
+    margin-inline-end: 10rem;
+}
+
+h6 {
+    font-family: customFont;
+    color: white;
+    font-size: 1rem;
+    margin-block-end: 0.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list {
+    padding-inline: 2rem;
+}
+
+.about {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
+    padding-inline: 2rem;
+    text-align: justify;
+}
+
+.column2 {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.column3 {
+    grid-column: 3/4;
+    text-align: center;
+}
+
+.row2 {
+    padding-inline: 2rem;
+
+}
+
+.copyright-text {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-block-end: 2rem;
+    font-size: 0.7rem;
+
+}
+
+.email {
+    background-color: rgb(13, 12, 12);
+}
+
+.btn {
+    background-color: rgb(13, 12, 12);
+    color: white;
+    font-family: customFont;
+    border:0;
+}
+
+.links {
+    font-size: 0.7rem;
+}
+input {
+    color: white;
+}

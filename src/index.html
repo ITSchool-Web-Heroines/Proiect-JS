@@ -1,23 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Proiect JavaScript</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <div class="vh-100 d-flex flex-column">
-      <header class="navbar bg-primary bg-gradient">
-        <div class="container-fluid">
-          <h1 class="navbar-brand mb-0 text-white">Proiect JavaScript</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.scss" />
+    <script src="script.js" type="module"></script>
+    <title>The Lippie Factory</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a class="logo" href="index.html"><img class="navbarlogo" src="./img/logowhite.png" alt="logo"></a>
+            <ul class="nav">
+              <li><a class="menu-item" href="story.html">Our Story</a></li>
+              <li><a class="menu-item" href="csr.html" >Our sustainable difference</a></li>
+              <li><a class="menu-item" href="boutique.html">The Boutique</a></li>
+            </ul>
         </div>
-      </header>
-      <main class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
-        <h2 class="display-1 text-center">15 Septembrie 2022</h2>
-      </main>
-    </div>
-  </body>
+        <img src="./img/ezgif-3-946256bfa1.gif" class="slideshow-img">
+    </header>
+    <section>
+        <div class="horizontalbar">
+            <div class="horizontalbarcol1">
+                <h7>1. Create your shade</h7>
+                <p class="infohorizontalbar">Mix your exact shade of nude, pink, red, blue–or whatever hue inspires you</p>
+            </div>
+            <div class="horizontalbarcol2">
+                <h7>2. Choose your finish</h7>
+                <p class="infohorizontalbar">Make it matte, satin, luminous, or sheer</p>
+            </div>
+            <div class="horizontalbarcol3">
+                <h7>3. Add your flavor</h7>
+                <p class="infohorizontalbar">Infuse the flavor that captures you best: rose, chocolate, vanilla, or chery</p>
+            </div>
+            <div class="horizontalbarcol4">
+                <h7>4. Choose your package</h7>
+                <p class="infohorizontalbar">Get creative: you know you've always wanted to customize a lipstick</p>
+            </div>
+        </div>
+        <div class="booking">
+            <img class="bookingpicture" src="./img/lipstick-bg-min.png">
+            <button class="btn1"><a class="btn1" href="boutique.html#container">Book An Experience</a></button>
+        </div>
+        <div class="specials">
+            <div class="col1">
+            <img class="specialspic" src="./img/CleanStandards.jpg">
+            <p class="infospecials"><a class="infospecials" href="csr.html">Clean Standards</a></p>
+            </div>
+            <div class="col2">
+            <img class="specialspic" src="./img/GiftCards.png">
+            <p class="infospecials"><a class="infospecials" href="#">Gift Cards</a></p>
+            </div>
+            <div class="col3">
+            <img class="specialspic" src="./img/PrivateParties.jpg">
+            <p class="infospecials"><a class="infospecials" href="boutique.html#container">Private Parties</a></p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="socials"></div>
+        <div class="row1">
+            <div class ="column1">
+                <h6>About</h6>
+                <p class="about">The Lippie Factory is a Romanian cosmetics company and boutique specializing in customized lip products. The brand was founded by Andreea Conoro in
+                2015 and it is carried exclusively at The Lippie Factory Bouutique based in Bucharest, Romania. What makes The Lippie Factory stand out from other local companies in the beauty industry is the fact that all its products
+                are made with food-grade, vegan ingredients and are infused with essential oils.</p>
+            </div>
+            <form class="column2">
+                <h6>Subscribe to our newsletter</h6>
+                <input class="email" type="email" placeholder="Email address"></input>
+                <button class="btn">Submit</button>
+            </form>
+            <div class="column3">
+                <h6>Quick links</h6>
+                <ul class="list">
+                    <li><a class="links" href="#">Contact</a></li>
+                    <li><a class="links" href="#">Terms and Conditions</a></li>
+                    <li><a class="links" href="#">Privacy Policy</a></li>
+                    <li><a class="links" href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row2">
+            <hr>
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                <a href="#">The Lippie Factory</a>
+        </div>
+    </footer>
+</body>
 </html>
