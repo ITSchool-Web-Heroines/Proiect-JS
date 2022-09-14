@@ -1,0 +1,595 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+
+// scss-docs-start import-stack
+// Configuration
+@import "~bootstrap/scss/bootstrap";
+
+
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Brandon Grotesque Light', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("forest22.jpg");
+  background-attachment: fixed;
+  z-index: 1;
+  // backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.bigcontainer {
+  background-color: white;
+  width: 23rem;
+  min-height: 100%;
+  margin: 2rem auto;
+  box-sizing: border-box;
+  box-shadow: 0.5rem 0.2rem 2rem 0rem rgba(53, 51, 51, 0.8);
+  border-radius: 1rem;
+}
+
+header {
+  background: url("forest2copy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  clip-path: polygon(0 0, 70% 0%, 100% 0, 100% 83%, 50% 100%, 0 83%, 0% 30%);
+  //https://bennettfeely.com/clippy/
+  width: 100%;
+  min-height: 17rem;
+  position: relative;
+
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgba(4, 4, 4, 0);
+  color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.active {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(4, 4, 4, 0.1);
+  text-align: center;
+  transition: 0.3s ease-in;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  &:hover, &:active, &:focus {
+    opacity: 0.5;
+  }
+}
+
+.nav-branding {
+  width:  30%;
+  opacity: 0.6;
+  border-radius: 50%;
+  margin-inline-start: 1rem;
+  margin-block-start: 1rem;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.hamburger.active .bar:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active .bar:nth-child(1){
+  transform: translatey(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+  transform: translatey(-8px) rotate(-45deg);
+}
+
+
+.anim {
+  margin: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 3px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, rgb(25, 119, 69),rgb(222, 223, 221)), rgb(125, 193, 128);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  animation: animate 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -700%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+
+.aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem 0.8rem;
+  animation: 3s square ease-in-out ;
+}
+
+@keyframes square {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.icons {
+  width: 2.2rem;
+}
+
+// INFINITE SLIDE https://css-tricks.com/books/fundamental-css-tactics/infinite-scrolling-background-image/
+
+.sliding{
+    overflow: hidden;
+}
+  
+.sliding-background {
+
+  background: url("forest.jpg") repeat;
+  height: 12rem;
+  width: 1000rem;
+  animation: slide 120s linear infinite;
+}
+  
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-200em, 0, 0);
+  }
+}
+
+.advertise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 2rem 2rem;
+  font-size: 100%;
+  text-align: center;
+
+  :first-child {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+}
+
+// PHOTOS
+.carousel {
+  margin: 2rem;
+}
+
+.d-block {
+  width: 100%;
+  height: 25rem;
+  &:hover {
+    transform: scale(1.3) ;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  img {
+    width: 15rem;
+    height: 12rem;
+    cursor: pointer;
+  }
+}
+
+
+//activities
+
+.list {
+  margin: 0.5rem;
+}
+.listtitle {
+  margin-block-start: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  color: darkgreen;
+  text-shadow: 4px 4px 6px rgba(150, 150, 150, 1)
+                           
+}
+
+.listitem {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-block: 1.5rem;
+}
+
+.act {
+  overflow: hidden;
+  width: 20rem;
+  height: 100%;
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  &:hover, :focus {
+    cursor: pointer ;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    opacity: 0.9;
+  }
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15rem;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    display: inline-block;
+    transform: scale(1.4);
+  }
+}
+
+.card-body {
+  margin-block-start: 2.5rem;
+  &:hover {
+    cursor: pointer ;  
+  }
+}
+
+
+//FORM
+.contactform {
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+    button {
+      width: max-content;
+      padding: 0.7rem 2rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+}
+  
+.area{
+  width: 12rem;
+  height: 100%;
+  margin: 1.5rem;
+  color: darkgreen;
+
+  input[type= text], textarea{
+    box-shadow: 7px 5px 15px -2px rgb(221, 250, 222);
+    border-radius: 1rem;
+    border-color: white;
+  }
+
+  input[type=checkbox] {
+    margin: 0.7rem 0.7rem; 
+  }
+}
+
+.label {
+  font-size: 1.3rem;
+  margin-block: 0.5rem;
+  font-weight: bold;
+}
+    
+
+// BACK TO THE TOP
+.to-top {
+  background: rgb(180, 243, 214);
+  position: fixed;
+  bottom: 800px;
+  right:30px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color: black;
+  text-decoration: none;
+  z-index: 1000;
+  opacity:0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  color: black;
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+  visibility: visible;
+}
+
+
+// FOOTER
+
+footer {
+  background: rgb(5, 40, 5);
+  border-radius: 0 0 1rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+    h4 {
+      text-transform: uppercase; 
+      margin: 2rem;
+    }
+  
+  }
+.f-title {
+  // margin-block: 2rem;
+  font-size: 1.3rem;
+  color: aquamarine;
+  text-shadow: 1rem white;
+}
+
+.footer-m {
+  align-items: flex-start
+}
+.aboutjourney {
+  margin-inline: 2rem;
+  font-size: 1rem;
+}
+
+
+a {
+  &:link, &:visited, &:active {
+    text-decoration: none; 
+    color: white;
+  }
+
+  &:hover {
+    color: white;
+    opacity: 0.5;
+  }
+}
+
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-branding-2 {
+  width:  35%;
+  opacity: 0.7;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-inline-start: 2rem;
+  margin-block-start: 2rem;
+}
+
+.social {
+  margin-block: 1rem;
+  .invite {
+    text-align: center;
+    margin-block: 1rem;
+    font-size: 1.3rem;
+    color:aquamarine;
+  }
+
+  .socialbtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-block-end: 2rem;
+  }
+}
+
+.copyright {
+  text-align: center;
+}
+
+
+
+@media(min-width: 530px) {
+  .bigcontainer {
+    width: 27rem;
+  }
+}
+
+@media(min-width: 640px) {
+  .bigcontainer {
+    width: 37rem;
+  }
+
+  
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .us {
+    font-size: 1rem;
+  }
+
+  .act {
+    width: 17rem;
+  }
+
+}
+
+@media(min-width: 840px) {
+  .bigcontainer {
+    width: 50rem;
+  }
+
+  header {
+    min-height: 20rem;
+  }
+
+  .nav-link{
+    font-size: 1.5rem;
+  }
+
+  .us {
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
+  }
+  .act {
+    width: 20rem;
+  }
+
+  .d-block {
+    height: 35rem;
+  }
+
+  .footer-menu {
+    h4 {
+      margin: 4rem;
+    }
+  }
+  .aboutjourney {
+    font-size: 1.2rem;
+    margin-inline: 10rem;
+  }
+}
+
+@media(min-width: 1100px) {
+  .bigcontainer {
+    width: 67rem;
+  }
+
+  header {
+    min-height: 24rem;
+  }
+
+  .nav-link{
+    font-size: 1.7rem;
+  }
+
+  .us {
+    font-size: 1.1rem;
+  }
+
+  .advertise {
+    margin-inline: 5rem ;
+  }
+
+  .contactform {
+    gap: 2rem;
+  }
+
+  .listtitle {
+    display: block;
+    text-align: center;
+  }
+
+  .links {
+    font-size: 1.3rem;
+  }
+}
