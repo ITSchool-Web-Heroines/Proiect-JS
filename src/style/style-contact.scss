@@ -92,6 +92,13 @@ textarea::-webkit-scrollbar-track {
 textarea::-webkit-scrollbar-thumb {
   background-color: #000;
 }
+.check-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
 #checkbox-one,
 #checkbox-two {
   appearance: none;

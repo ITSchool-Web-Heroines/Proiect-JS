@@ -159,6 +159,7 @@ p.shop-title {
 .candles-click,
 .accs-click {
   display: flex;
+  grid-row: 3/4;
 }
 .ground-button,
 .beans-button,
@@ -169,6 +170,7 @@ p.shop-title {
   cursor: pointer;
   color: #000;
   line-height: 60%;
+  text-decoration: none;
   font-size: 3.5rem;
 }
 .bag-img,

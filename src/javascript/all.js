@@ -26,14 +26,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// SUBSCRIBE EVENT
-
-// function clearInput(formInput) {
-//   console.log(formInput.value);
-//   formInput.value = "";
-// }
+// SUBSCRIBE
 const formInputs = document.querySelectorAll("input");
-const messageInput = document.querySelector("textarea");
 const submitForms = document.querySelectorAll("form");
 const submitBox = document.querySelector(".submit-background");
 submitForms.forEach(submitForm => {
@@ -47,6 +41,5 @@ submitForms.forEach(submitForm => {
       console.log(formInput.value);
       formInput.value = "";
     });
-    messageInput.value = "";
   });
 });

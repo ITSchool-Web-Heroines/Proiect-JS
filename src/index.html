@@ -28,12 +28,22 @@
               Get 10% off your next order just by signing up!
             </p>
             <form action="">
-              <label class="news-text title" for="subscribeName"> NAME </label>
-              <input class="input-ad-name" id="subscribeName" type="text" />
+              <label class="news-text title" for="subscribeName">NAME</label>
+              <input
+                class="input-ad-name"
+                id="subscribeName"
+                type="text"
+                required
+              />
               <label class="news-text title" for="subscribeEmail">
                 EMAIL
               </label>
-              <input class="input-ad-email" type="email" id="subscribeEmail" />
+              <input
+                class="input-ad-email"
+                type="email"
+                id="subscribeEmail"
+                required
+              />
               <button class="ad-news-submit" type="submit">SUBSCRIBE</button>
             </form>
           </div>
@@ -184,6 +194,7 @@
           type="email"
           id="newsEmail"
           placeholder="GET THE LATEST FROM CAIMAC COFFEE"
+          required
         />
         <button class="content-button btn-news" type="submit">SUBSCRIBE</button>
       </form>
