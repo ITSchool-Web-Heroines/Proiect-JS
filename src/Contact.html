@@ -56,9 +56,7 @@
     }
 
     button {
-      float: right;
       padding: 0.5rem 0.75rem;
-      margin: 0.5rem 0 0;
       font-family: "Montserrat", sans-serif;
       border: 0.125rem solid #78788c;
       background: 0;
@@ -103,7 +101,7 @@
   }
   button {
       font-family: "Montserrat", sans-serif;
-      border: 2px solid #000000;
+      border: 0.1rem solid #000000;
       background: 0;
       color: #000000;
       cursor: pointer;
@@ -142,6 +140,15 @@
           <p type="Name:"><input placeholder="Write your name here"></input></p>
           <p type="Email:"><input placeholder="Let us know how to contact you back"></input></p>
           <p type="Message:"><input placeholder="What would you like to tell us"></input></p>
+          <p type="Area:"><select name="area" id="area"></p>
+            <option value="" selected="selected">Select your area from the dropdown menu</option>
+          </select>
+          <p type="Country:"><select name="country" id="country"></p>
+            <option value="" selected="selected">Select your country from the dropdown menu</option>
+          </select>
+          <p type="Citry:"><select name="city" id="city"></p>
+            <option value="" selected="selected">Select your city from the dropdown menu</option>
+          </select>
           <p id="form"></p>
           <button onclick="myFunction()">Submit</button>
           
@@ -160,6 +167,77 @@
           }
           document.getElementById("form").innerHTML = txt;
         }
+
+        
+        var areaObject = {
+              "Asia": {
+              "India": ["Mumbai", "Delhi", "Bangalore", "Chennai"],
+              "Japan": ["Tokyo ", "Yokohama ", "Osaka ", "Nagoya "],
+              "Malaysia": ["Kuala Lumpur", "Kajang", "Seberang Perai", "Petaling Jaya"] 
+              },
+              "Middle East, North Africa, and Greater Arabia": {
+                "Egypt": ["Cairo", "Alexandria", "Suez"],
+                "Morocco": ["Casablanca", "Fez", "Marrakesh"],
+                "Tunisia": ["Tunis", "Sfax", "Sousse"]
+                },
+              "Europe": {
+                "Italy": ["Rome", "Milan", "Naples"],
+                "Romania": ["Bucharest", "Cluj", "Suceava"],
+                "Spain": ["Madrid ", "Barcelona ", "Valencia "]
+                },  
+              "North America": {
+                "Canada": ["Toronto ", "Montréal ", "Vancouver "],
+                "Mexico": ["Mexico City", "Ecatepec", "Guadalajara"],
+                "The United States of America": ["Texas", "California", "Minnesota"]
+                },
+              "Central America and the Caribbean": {
+                "Costa Rica": ["San José", "Puerto Limón", "Alajuela "],
+                "Haiti": ["Port-Au-Prince", "Carrefour", "Delmas"],
+                "Jamaica": ["Portmore", "Kingston", "Mandeville"]
+                },
+              "South America": {
+                "Argentina": ["Buenos Aires", "Córdoba", "Santa Fe de la Vera Cruz"],
+                "Ecuador": ["Guayaquil", "Quito", "Santo Domingo"],
+                "Venezuela": ["Caracas", "Maracaibo", "Barquisimeto"]
+                },
+              "Sub-Saharan Africa": {
+                "Burkina Faso": ["Ouagadougou", "Bobo-Dioulasso", "Koudougou"],
+                "Guinea-Bissau": ["Bissau", "Bafatá", "Gabú"],
+                "Republic of the Congo": ["Brazzaville", "Pointe-Noire", "Dolisie"]
+                },
+              "Australia and Oceania": {
+                "Fiji": ["Suva", "Lautoka", "Nadi"],
+                "New Zealand": ["Auckland", "Wellington", "Hamilton"],
+                "Papua New Guinea": ["Port Moresby", "Lae", "Arawa"]
+                }
+             }
+             
+            window.onload = function() {
+              var areaSel = document.getElementById("area");
+              var countrySel = document.getElementById("country");
+              var citySel = document.getElementById("city");
+              for (var x in areaObject) {
+                areaSel.options[areaSel.options.length] = new Option(x, x,);
+              }
+              
+              areaSel.onchange = function() {
+                citySel.length = 1;
+                countrySel.length = 1;
+                for (var y in areaObject[this.value]) {
+                  countrySel.options[countrySel.options.length] = new Option(y, y);
+                  }
+                }
+
+                countrySel.onchange = function() {
+                 citySel.length = 1;
+                 var z = areaObject[areaSel.value][this.value];
+                 for (var i = 0; i < z.length; i++) {
+                  citySel.options[citySel.options.length] = new Option(z[i], z[i]);
+                  }
+                }
+            }
+
+
         </script>
   </body>
 </html>
