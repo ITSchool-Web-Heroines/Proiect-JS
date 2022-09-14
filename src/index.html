@@ -1,23 +1,270 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Proiect JavaScript</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./index.scss" />
-    <script type="module" src="./index.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FAROE ISLANDS</title>
   </head>
   <body>
-    <div class="vh-100 d-flex flex-column">
-      <header class="navbar bg-primary bg-gradient">
-        <div class="container-fluid">
-          <h1 class="navbar-brand mb-0 text-white">Proiect JavaScript</h1>
-        </div>
-      </header>
-      <main class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
-        <h2 class="display-1 text-center">15 Septembrie 2022</h2>
-      </main>
+    <div class="container1">
+      <nav>
+        <a href="#">About</a>
+        <a href="Tours.html">Tours</a>
+        <a href="https://korona.fo/travel?_l=en">Covid19</a>
+        <a href="See.html">See&Do</a>
+        <a href="Contact.html">Contact</a>
+        <div class="animation start-home"></div>
+      </nav>
+      <p class="flip">
+        <span style="--i: 1;">F</span>
+        <span style="--i: 2;">A</span>
+        <span style="--i: 3;">R</span>
+        <span style="--i: 4;">O</span>
+        <span style="--i: 5;">E</span>
+        <span style="--i: 6;"> </span>
+        <span style="--i: 7;">I</span>
+        <span style="--i: 8;">S</span>
+        <span style="--i: 9;">L</span>
+        <span style="--i: 10;">A</span>
+        <span style="--i: 11;">N</span>
+        <span style="--i: 12;">D</span>
+        <span style="--i: 13;">S</span>
+      </p>
     </div>
+
+    <div class="gallery" id="myGallery">
+      <button class="btn active" onclick="two()">2</button>
+      <button class="btn" onclick="four()">4</button>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="Grid/Grid1.jpg" style="width: 100%;" />
+        <img src="Grid/Grid2.jpg" style="width: 100%;" />
+        <img src="Grid/Grid3.jpg" style="width: 100%;" />
+        <img src="Grid/Grid4.jpg" style="width: 100%;" />
+        <img src="Grid/Grid5.jpg" style="width: 100%;" />
+      </div>
+
+      <div class="column">
+        <img src="Grid/Grid6.jpg" style="width: 100%;" />
+        <img src="Grid/Grid7.jpg" style="width: 100%;" />
+        <img src="Grid/Grid8.jpg" style="width: 100%;" />
+        <img src="Grid/Grid9.jpg" style="width: 100%;" />
+        <img src="Grid/Grid10.jpg" style="width: 100%;" />
+      </div>
+
+      <div class="column">
+        <img src="Grid/Grid11.jpg" style="width: 100%;" />
+        <img src="Grid/Grid12.jpg" style="width: 100%;" />
+        <img src="Grid/Grid13.jpg" style="width: 100%;" />
+        <img src="Grid/Grid14.jpg" style="width: 100%;" />
+        <img src="Grid/Grid15.jpg" style="width: 100%;" />
+      </div>
+
+      <div class="column">
+        <img src="Grid/Grid16.jpg" style="width: 100%;" />
+        <img src="Grid/Grid17.jpg" style="width: 100%;" />
+        <img src="Grid/Grid18.jpg" style="width: 100%;" />
+        <img src="Grid/Grid19.jpg" style="width: 100%;" />
+        <img src="Grid/Grid20.jpg" style="width: 100%;" />
+      </div>
+    </div>
+
+    <script>
+      var elements = document.getElementsByClassName("column");
+      var i;
+
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%";
+          elements[i].style.flex = "50%";
+        }
+      }
+
+      function four() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "25%";
+          elements[i].style.flex = "25%";
+        }
+      }
+
+      var gallery = document.getElementById("myGallery");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+
+    <h1>Our Travel Proposals</h1>
+    <section class="explore">
+      <div class="cards">
+        <div class="card">
+          <img src="Tours/Explore1.jpg" />
+          <div class="info">
+            <p class="title">Fly&Drive</p>
+            <span class="offer"
+              >We design your Fly&Drive package to the Faroe Islands, including
+              a car rental for the whole stay, accomodation in the best places
+              and a PDF with places to visit and all the information you need
+              for your adventure.</span
+            >
+            <input type="button" value="From 11.990 DKKs" onclick="msg()" />
+          </div>
+        </div>
+        <div class="card center">
+          <img src="Tours/Explore2.jpg" />
+          <div class="info">
+            <p class="title">Photography tour</p>
+            <span class="offer"
+              >The Faroe Islands are a paradise for any photographer, both
+              beginners and professional. Join one of our photography tours and
+              enjoy our landscapes with a local professional photographer.</span
+            >
+            <input type="button" value="From 25.990 DKK" onclick="msg()" />
+          </div>
+        </div>
+        <div class="card">
+          <img src="Tours/Explore3.jpg" />
+          <div class="info">
+            <p class="title">Private Guided Tours</p>
+            <span class="offer"
+              >Tell us your travel preferences and we'll arrange the perfect
+              private trip you. Enjoy the mosth authentic faroese experiences
+              always with a local guide.​ We can also provide the most exclusive
+              VIP services upon request.</span
+            >
+            <input type="button" value="From 27.250 DKK" onclick="msg()" />
+          </div>
+        </div>
+        <div class="card">
+          <img src="Tours/Explore4.png" />
+          <div class="info">
+            <p class="title">Guided tours</p>
+            <span class="offer"
+              >Discover the amazing Faroe Islands with our experienced local
+              guides. We offer regular departures in small groups of maximum 8
+              people for a very personal service. 6 departures every
+              summer.</span
+            >
+            <input type="button" value="From 22.250 DKK" onclick="msg()" />
+
+            <script>
+              function msg() {
+                alert("Working on it!");
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="about">
+      <h2>Geography</h2>
+      <p>
+        <img align="right" src="About/Map.jpg" style="width: 20%;" />
+        Covering a total area of about 1,399 km2, the Faroe Islands archipelago
+        comprises 18 principal islands along with numerous small rocky islands
+        and islets. Some of the major islands of the archipelago include Borðoy,
+        Eysturoy, Sandoy, Streymoy, Suðuroy, Svínoy, and Vágar. Out of the 18
+        main islands of the archipelago, 17 of these islands are inhabited while
+        only the small Lítla Dímun island is uninhabited. Covering an area of
+        373 km2, the oblong-shaped Streymoy Island is the biggest and the most
+        populous in the Faroe Islands archipelago. Located on the southern edge
+        of the Streymoy island is Tórshavn, the capital and main port of the
+        Faroe Islands archipelago. Eysturoy is the second-largest island on the
+        archipelago that covers an area of about 286.3 km2. The islands are
+        further administratively divided into 29 municipalities that consist of
+        more than 120 settlements.The Faroe Islands have rugged and rocky
+        terrain and are mainly composed of basaltic lava. There are few small
+        elevated peaks and the highly indented coast of the islands features
+        several fjords that are further lined by numerous perpendicular cliffs.
+        Located in the northern part of Eysturoy Island is Slættaratindur, which
+        rises to an elevation of 882 m and is the highest point in the Faroe
+        Island archipelago. There are few small rivers and minor lakes in the
+        Faroe Islands archipelago. According to the Köppen climate
+        classification, the Faroe Islands experiences a subpolar oceanic climate
+        with mild winters and cool summers. The climate of the archipelago is
+        strongly influenced by the warm North Atlantic Current, which helps to
+        keep the harbors on the island ice-free throughout the year.
+      </p>
+      <h3>Wildife</h3>
+      <p>
+        <img align="left" src="About/Wildlife.png" style="width: 20%;" />
+        At first sight, the Faroe Islands might give the impression of quite a
+        uniform vegetation with no trees – only a tundra-like appearance. A
+        closer look however, reveals surprising diversity. he fauna of the Faroe
+        Islands reflects the islands’ remoteness, as there are few terrestrial
+        species, but plenty of seabirds and marine animals. While humans have
+        introduced all of the island’s land mammals, intentionally or otherwise,
+        most of the birds and marine animals are endemic. When the ice melted
+        after the last ice age, some 10-20.000 years ago, the islands were bare
+        rocks with hardly any plants. But as the ice disappeared and the cliffs
+        crumbled, plants started to grow and they spread. Some Arctic species
+        such as “Mountain Poppy” and “Dwarf Cudweed” probably survived the last
+        ice age on some ice-free mountaintops (nunataks), but the majority of
+        plants growing in the Faroe Islands today arrived after the ice age. The
+        vegetation of the Faroe Islands archipelago is dominated by grass,
+        wildflowers, moss, arctic-alpine plants, and lichen. Due to the strong
+        westerly winds and frequent gales that are faced by the archipelago, the
+        Faroe Islands are mostly treeless although a few hardy trees have
+        recently been introduced in the sheltered plantations of the islands.
+        Numerous avian species are found on the Faroe Islands. These include the
+        various species of seabirds, common starling, common murre, common
+        eider, Atlantic puffins, Eurasian wren, and the black guillemot. Few
+        terrestrial animals are found here including the mountain hare, brown
+        rat, house mouse, Faroe sheep, Faroe cow, and Faroe pony. Several
+        cetacean species are recorded in the waters surrounding the Faroe
+        Islands. Grey seals and long-finned pilot whales are also found here.
+        Killer whales are frequently observed around
+      </p>
+      <h4>Brief History</h4>
+      <p>
+        <img align="right" src="About/History.jpg" style="width: 20%;" />
+        The first known settlers in the Faroe Islands were Irish monks, who in
+        the 6th century AD told of the “Islands of the Sheep and the Paradise of
+        Birds”.The name of the Faroe Islands first appeared as Føroyar in the
+        Faroese language. The Danish name for the Faroe Islands, Færøerne, is a
+        reflection of Old Norse terms that likely mean “Sheep Islands.” The
+        Faroe Islands were originally inhabited by the Irish monks and then by
+        the Vikings in the early 9th century. The Faroe Islands became a part of
+        the Hereditary Kingdom of Norway in 1035 and 1380 along with the rest of
+        Norway, they were taken over by Denmark. Under the Treaty of Kiel in
+        1814, the Danish gained complete authority over the Faroe Islands along
+        with Greenland and Iceland. The Faroe Islands became an autonomous
+        country within the Kingdom of Denmark in 1948. Today fisheries and
+        aquaculture are the basis for the production and export of high quality
+        Faroese fish products, which constitute 95 per cent of the total income
+        of exported goods. Diversification of the economy and the development of
+        a welfare society has led to a variety of working opportunities in the
+        modern Faroese society. With economic wealth the Faroese have developed
+        a welfare society much along the lines of the typical Scandinavian
+        welfare state model, e.g. with free education and healthcare for all.
+      </p>
+    </div>
+    <footer class="footer-box">
+      <div class="footer-content">
+        <div class="sm-logo-footer footer-menu-item"></div>
+
+        <div class="list-footer list-menu-footer footer-menu-item">
+          <ul class="menu-footer">
+            <li><a href="index.html" class="footer-item">ABOUT</a></li>
+            <li>
+              <a href="https://korona.fo/travel?_l=en" class="footer-item"
+                >COVID19</a
+              >
+            </li>
+            <li><a href="Tours.html" class="footer-item">TOURS</a></li>
+            <li><a href="See.html" class="footer-item">SEE&DO</a></li>
+            <li><a href="Contact.html" class="footer-item">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
