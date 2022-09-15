@@ -14,7 +14,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "sass": "^1.54.9"
   },
   "dependencies": {
     "bootstrap": "^5.2.0"
