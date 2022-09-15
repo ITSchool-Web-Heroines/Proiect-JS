@@ -25,3 +25,11 @@ hover.addEventListener(
   },
   false
 );
+
+const photo = document.querySelector(".slider");
+photo.addEventListener("mouseover", (ev) => {
+  const items = document.querySelectorAll(".imgg");
+  items.forEach((currentValue) => {
+    ev.target.style.backgroundColor = "rgba(0 ,0 ,0, 0.8)";
+  });
+});
