@@ -1,5 +1,7 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-@import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+// @import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
 
 // scss-docs-start import-stack
 // Configuration
@@ -9,7 +11,7 @@
 * {
   margin:0;
   padding:0;
-  font-family: 'Brandon Grotesque Light', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 html {
@@ -79,7 +81,7 @@ li {
 .nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   &:hover, &:active, &:focus {
     opacity: 0.5;
   }
@@ -132,7 +134,7 @@ li {
   position: relative;
   font-family: sans-serif;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.9em;
   letter-spacing: 3px;
   overflow: hidden;
   background: linear-gradient(90deg, #000, rgb(25, 119, 69),rgb(222, 223, 221)), rgb(125, 193, 128);
@@ -223,7 +225,7 @@ li {
   text-align: center;
 
   :first-child {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 1.5rem;
   }
 }
@@ -261,7 +263,7 @@ li {
   margin: 0.5rem;
 }
 .listtitle {
-  margin-block-start: 3rem;
+  margin-block-start: 4rem;
   font-size: 2rem;
   text-align: center;
   color: darkgreen;
@@ -321,12 +323,13 @@ li {
   align-items: center;
 
 
-    button {
+    .btn-success {
       width: max-content;
-      padding: 0.7rem 2rem;
+      padding: 0.6rem 1.8rem;
 
       &:hover {
-        opacity: 0.5;
+        background-color: white;
+        color: green;
       }
     }
 }
@@ -349,7 +352,7 @@ li {
 }
 
 .label {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-block: 0.5rem;
   font-weight: bold;
 }
@@ -413,14 +416,13 @@ footer {
   
   }
 .f-title {
-  // margin-block: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: aquamarine;
   text-shadow: 1rem white;
 }
 
 .footer-m {
-  align-items: flex-start
+  align-items: flex-start;
 }
 .aboutjourney {
   margin-inline: 2rem;
@@ -445,6 +447,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-inline: 0.5rem;
 }
 
 .nav-branding-2 {
@@ -461,7 +464,7 @@ a {
   .invite {
     text-align: center;
     margin-block: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color:aquamarine;
   }
 
@@ -507,7 +510,7 @@ a {
     gap: 1rem;
   }
   .nav-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .us {
@@ -530,7 +533,7 @@ a {
   }
 
   .nav-link{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .us {
@@ -569,7 +572,7 @@ a {
   }
 
   .nav-link{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .us {
@@ -590,6 +593,6 @@ a {
   }
 
   .links {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
