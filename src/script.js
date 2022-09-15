@@ -12,3 +12,16 @@ document.querySelectorAll(".nav-link, .nav-link-special").forEach((event) =>
     navMenu.classList.remove("active");
   })
 );
+
+const hover = document.querySelector(".subtitle.text");
+hover.addEventListener(
+  "mouseover",
+  (ev) => {
+    ev.target.style.fontSize = "2rem";
+
+    setTimeout(() => {
+      ev.target.style.fontSize = "";
+    }, 700);
+  },
+  false
+);

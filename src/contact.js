@@ -37,7 +37,8 @@ const validateInputs = () => {
   const hourValue = hour.value.trim();
   const phoneValue = phone.value.trim();
   const locationValue = location.value.trim();
-  let nr_tel = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  const nr_tel = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
   if (usernameValue === "") {
     setError(username, "Numele este necesar!");
   } else {
