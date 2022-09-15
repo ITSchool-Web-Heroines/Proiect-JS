@@ -13,7 +13,7 @@ document.querySelectorAll(".nav-link, .nav-link-special").forEach((event) =>
   })
 );
 
-const hover = document.querySelector(".subtitle.text");
+const hover = document.querySelector("#new");
 hover.addEventListener(
   "mouseover",
   (ev) => {
@@ -29,7 +29,7 @@ hover.addEventListener(
 const photo = document.querySelector(".slider");
 photo.addEventListener("mouseover", (ev) => {
   const items = document.querySelectorAll(".imgg");
-  items.forEach((currentValue) => {
-    ev.target.style.backgroundColor = "rgba(0 ,0 ,0, 0.8)";
+  items.forEach((value) => {
+    ev.target.style.backgroundColor = "rgba(0,0,0,0.8)";
   });
 });
