@@ -1,44 +1,28 @@
 @use "../mixin.scss" as *;
-
-@mixin before-style($image) {
-  content: "";
-  background-image: $image;
-  width: var(--product-size);
-  height: var(--product-size);
-  position: absolute;
-  background-position: center;
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
+.AB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-A.png));
 }
-.product-box {
-  div {
-    &.AB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-A.png));
-    }
-    &.BB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-B.png));
-    }
-    &.DB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-D.png));
-    }
-    &.EB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-E.png));
-    }
-    &.FB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-F.png));
-    }
-    &.HB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-H.png));
-    }
-    &.TB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-T.png));
-    }
-    &.UB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-U.png));
-    }
-    &.VB::before {
-      @include before-style(url(../IMG/SHOP/CLOSEUP/CU-V.png));
-    }
-  }
+.BB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-B.png));
+}
+.DB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-D.png));
+}
+.EB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-E.png));
+}
+.FB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-F.png));
+}
+.HB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-H.png));
+}
+.TB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-T.png));
+}
+.UB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-U.png));
+}
+.VB .shop-details {
+  @include details-image-style(url(../IMG/SHOP/CLOSEUP/CU-V.png));
 }

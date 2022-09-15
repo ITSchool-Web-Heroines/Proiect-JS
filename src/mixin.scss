@@ -23,3 +23,20 @@
     }
   }
 }
+
+@mixin details-style($color) {
+  background-color: $color;
+  text-align: center;
+  @include font-details(#fff, "bc-regular", 1.2rem, none);
+  width: var(--product-size);
+  height: var(--product-size);
+  padding: 1rem;
+}
+@mixin details-image-style($image) {
+  background-image: $image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: var(--product-size);
+  height: var(--product-size);
+}

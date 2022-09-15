@@ -1,66 +1,29 @@
 @use "../mixin.scss" as *;
 
-@mixin before-style($description) {
-  content: $description;
-  background-color: #000;
-  text-align: center;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1.3rem;
-  color: #fff;
-  width: calc(var(--product-size) - 2rem);
-  height: calc(var(--product-size) - 3.5rem);
-  position: absolute;
-  padding-block: 2.5rem 1rem;
-  padding-inline: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
+.AB .shop-details {
+  @include details-style(#000);
 }
-.product-box {
-  div {
-    &.AB::before {
-      @include before-style(
-        "Caimac Almond Syrup has a subtle sweetness and rich nutty aroma. Use it to add balanced, true almond flavor to hot or cold coffee beverages, specialty drinks and more."
-      );
-    }
-    &.BB::before {
-      @include before-style(
-        "The rich, sweet, and buttery smoothness of caramel has come a long way from chewy wrapped candies. Caimac Caramel Syrup delivers mouth-watering decadence to your favorite hot or cold coffee beverages."
-      );
-    }
-    &.DB::before {
-      @include before-style(
-        "Caimac Chocolate Syrup is a classic re-imagined adding indulgence to your morning coffee or after-dinner drinks; it blends perfectly into hot or iced mochas and lattes or classic frozen milkshakes. Enjoy the sweet, goodness of decadent chocolate in your favorite drink."
-      );
-    }
-    &.EB::before {
-      @include before-style(
-        "Caimac Coconut Syrup is an extremely versatile flavor, its intense, sweet flavor goes well with sweet, bitter, and salty flavors. As well as having many culinary uses. Enjoy a taste of the tropics by adding Caimac Coconut Syrup to your coffees and drift away to the shade of a coconut palm."
-      );
-    }
-    &.FB::before {
-      @include before-style(
-        "Caimac Hazelnut Syrup adds rich, nutty goodness to lattes, mochas, smoothies, shakes and mocktails. It also enhances your coffee, chocolate, milk drinks and allows you to create sophisticated dessert drinks with a delicious hint of nut."
-      );
-    }
-    &.HB::before {
-      @include before-style(
-        "Caimac Irish Syrup will add the luck of Irish to your drinks! Perfect for creating non-alcoholic Irish coffees, specialty coffees, dessert drinks and smoothies."
-      );
-    }
-    &.TB::before {
-      @include before-style(
-        "Caimac pumpkin spice notes of ripe pumpkin meet warm notes of cinnamon and nutmeg for a balanced flavor that will turn any drink or culinary creation into an autumn delight. Seasonal lattes have never tasted better!"
-      );
-    }
-    &.UB::before {
-      @include before-style(
-        "Caimac Tiramisu Syrup brings freshness and a unique taste to cocktails, iced teas and soft drinks. This popular and versatile flavor brings a unique touch to drinks of all kinds."
-      );
-    }
-    &.VB::before {
-      @include before-style(
-        "Caimac Vanilla Syrup is a popular, versatile flavor that brings smooth warmth to beverages of every kind. Caimac Vanilla Syrup adds rich, smooth flavor to lattes, mochas, smoothies, shakes or even whipped cream."
-      );
-    }
-  }
+.BB .shop-details {
+  @include details-style(#000);
+}
+.DB .shop-details {
+  @include details-style(#000);
+}
+.EB .shop-details {
+  @include details-style(#000);
+}
+.FB .shop-details {
+  @include details-style(#000);
+}
+.HB .shop-details {
+  @include details-style(#000);
+}
+.TB .shop-details {
+  @include details-style(#000);
+}
+.UB .shop-details {
+  @include details-style(#000);
+}
+.VB .shop-details {
+  @include details-style(#000);
 }
