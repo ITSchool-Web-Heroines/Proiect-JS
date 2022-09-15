@@ -8,6 +8,7 @@
     <title>FAROE ISLANDS</title>
   </head>
   <body>
+    <div id="preload"></div>
   
     <div class="container1">
       <nav>
@@ -233,7 +234,10 @@
       </div>
     </footer>
     <script>
-
+      var loader = document.getElementById("preload")
+      window.addEventListener("load", function()
+      loader.style.display = "none";
+})
 
       function msg() {
                 alert("Working on it!");
