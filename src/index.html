@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./style.scss" />
     </head>
+    <script type="module" src="./script.js"></script>
     <body>
-        <script type="module" src="./script.js"></script>
         <div class="bigcontainer">
             <header class="cont">
                 <img src="vec1.jpg" href="#" class="nav-branding" />
@@ -117,11 +117,12 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text"> This content is a little bit longer.</p>
-                              <button type="button" class="btn btn-outline-success">Details</button>
-                              
+                              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
                             </div>
                           </div>
                         </div>
+
+
                         
                         <div class="col listitem">
                           <div class="card h-100 act">
@@ -201,6 +202,30 @@
                         </div>
                     </div>
                 </section>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" id="myInput">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                          Debitis dignissimos molestias magnam nemo doloremque ratione veritatis officia unde
+                           provident exercitationem! Exercitationem dolorum voluptas praesentium asperiores minus quia ut fuga veniam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                          Debitis dignissimos molestias magnam nemo doloremque ratione veritatis officia unde
+                          provident exercitationem! Exercitationem dolorum voluptas praesentium asperiores minus quia ut fuga veniam.</p>
+                        <img class="modal-content"src="hikingredlake.jpg">
+                      </div>
+                      <div class="modal-footer">
+                        
+          
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="photos" id="photos">
                     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
