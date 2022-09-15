@@ -29,13 +29,10 @@ main * {
   display: flex;
   flex-direction: row;
   background-color: #000;
-  color: #fff;
   padding: 0.5rem 0.75rem;
   margin-block: 0.5rem;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.5rem;
+  @include font-details(#fff, "bc-medium", 1.5rem, uppercase);
   position: relative;
   transition: background-color ease-in 0.2s;
   justify-content: center;
@@ -98,10 +95,7 @@ a.shop-subtitle {
 }
 p.shop-title {
   text-align: center;
-  color: #000;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.7rem;
-  text-transform: uppercase;
+  @include font-details(#000, "bc-medium", 1.7rem, uppercase);
   max-width: 25rem;
 }
 .fade-in {
@@ -126,10 +120,7 @@ p.shop-title {
 .candles-title-photo,
 .accs-title-photo {
   text-decoration: none;
-  color: #000;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  @include font-details(#000, "bc-medium", 1.5rem, uppercase);
 }
 .ground-shop-box,
 .beans-shop-box,

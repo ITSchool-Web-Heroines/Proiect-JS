@@ -57,17 +57,12 @@ div.about-text,
 .roast-title,
 .about-subtitle,
 .roast-subtitle {
-  color: #fff;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.7rem;
-  text-transform: uppercase;
+  @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
 }
 .source-text,
 .about-text,
 .roast-text {
-  color: #fff;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1.2rem;
+  @include font-details(#fff, "bc-medium", 1.2rem, none);
 }
 p.source-title,
 p.source-text,

@@ -198,9 +198,7 @@ input[type="email"] {
   transform: translate(0rem, 0rem);
   .banner-text,
   .btn-close {
-    color: #fff;
-    font-family: "bc-regular", sans-serif;
-    font-size: 1.1rem;
+    @include font-details(#fff, "bc-regular", 1.1rem, none);
   }
   .btn-close {
     border: none;
@@ -268,9 +266,12 @@ input[type="email"] {
       }
       padding: 0.5rem 1rem;
       text-decoration: none;
-      font-family: "bc-medium", sans-serif;
-      font-size: 1.5rem;
-      color: var(--menu-link-color);
+      @include font-details(
+        var(--menu-link-color),
+        "bc-medium",
+        1.5rem,
+        uppercase
+      );
       transition: all ease-in-out 0.2s;
       border: none;
     }
@@ -355,10 +356,9 @@ input[type="email"] {
   justify-items: center;
 }
 .footer-item {
+  @include font-details(var(--footer-color), "bc-regular", 1.2rem, uppercase);
   color: var(--footer-color);
   text-decoration: none;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1.2rem;
   text-align: center;
 }
 .footer-logo-box {
@@ -379,8 +379,7 @@ input[type="email"] {
   gap: 0.5rem;
 }
 .input-email {
-  font-family: "bc-regular", sans-serif;
-  font-size: 1rem;
+  @include font-details(#000, "bc-regular", 1rem, none);
   width: 17rem;
   border-radius: 0px;
   border: 0.1rem solid #000;
@@ -396,14 +395,11 @@ input[type="email"] {
   cursor: pointer;
   width: 8rem;
   background-color: var(--button-bcg-color);
-  color: var(--button-color);
   border: none;
   padding: 0.5rem;
   margin-block: 0.5rem;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.3rem;
+  @include font-details(var(--button-color), "bc-medium", 1.3rem, uppercase);
   position: relative;
   transition: background-color ease-in 0.2s;
   &.btn-news {

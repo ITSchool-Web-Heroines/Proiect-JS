@@ -35,9 +35,6 @@
 }
 /* SUBTITLE */
 p.subtitle {
-  color: #fff;
-  font-family: "bc-medium", sans-serif;
-  text-transform: uppercase;
   text-align: center;
   padding-inline: 0.5rem;
   padding-block-end: 0.2rem;
@@ -51,12 +48,11 @@ div.subtitle-box {
 }
 p.subtitle.title {
   @include animation-fade-in();
-  font-size: 2rem;
-  padding-block-end: 0rem;
+  @include font-details(#fff, "bc-medium", 2rem, uppercase);
 }
 p.subtitle.sub-title {
   @include animation-fade-in();
-  font-size: 1.7rem;
+  @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
 }
 /* MAIN CONTENT */
 main {
@@ -84,22 +80,17 @@ section.about-box {
 .about-box p,
 .coffee-box p,
 .location-box p {
-  color: #fff;
   text-align: center;
 }
 p.about-text,
 p.coffee-text,
 p.location-text {
-  text-align: center;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1.2rem;
+  @include font-details(#fff, "bc-regular", 1.2rem, none);
 }
 p.about-title,
 p.coffee-title,
 p.location-title {
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  @include font-details(#fff, "bc-medium", 1.5rem, uppercase);
   width: 10rem;
 }
 .location-box {
@@ -108,13 +99,10 @@ p.location-title {
 .index-button {
   height: fit-content;
   background-color: #fff;
-  color: #000;
   padding: 0.5rem 0.75rem;
   margin-block: 0.5rem;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.3rem;
+  @include font-details(#000, "bc-medium", 1.3rem, uppercase);
   position: relative;
   transition: background-color ease-in 0.2s;
   &:hover,
