@@ -1,5 +1,5 @@
 // SUBSCRIBE
-const formInputs = document.querySelectorAll("input");
+/*const formInputs = document.querySelectorAll("input");
 const messageInput = document.querySelector("textarea");
 const checkInputs = document.querySelectorAll('input[type="checkbox"]');
 const submitForms = document.querySelectorAll("form");
@@ -16,11 +16,4 @@ submitForms.forEach(submitForm => {
     });
   });
 });
-function fullForm() {
-  if (parseInt($('input[name="not_robot"]').val()) == 12) {
-    return true;
-  } else {
-    alert("You not enterd the correct value");
-    return false;
-  }
-}
+*/

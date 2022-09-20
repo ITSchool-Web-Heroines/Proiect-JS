@@ -20,22 +20,22 @@ window.addEventListener("scroll", () => {
   }
 });
 // SUBSCRIBE
-const formInputs = document.querySelectorAll("input");
+/*const formInputs = document.querySelectorAll("input");
 const submitForms = document.querySelectorAll("form");
 const submitBox = document.querySelector(".submit-background");
 submitForms.forEach(submitForm => {
   submitForm.addEventListener("submit", event => {
-    event.preventDefault();
+    // event.preventDefault();
     submitBox.classList.add("fill");
     setTimeout(() => {
       submitBox.classList.remove("fill");
     }, 3500);
-    formInputs.forEach(formInput => {
-      console.log(formInput.value);
-      formInput.value = "";
-    });
+    // formInputs.forEach(formInput => {
+    //   console.log(formInput.value);
+    //   formInput.value = "";
+    // });
   });
-});
+});*/
 
 // ON LOAD WINDOW
 const loader = document.querySelector("#preloader");
