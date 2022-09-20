@@ -201,6 +201,9 @@ input[type="email"] {
     @include font-details(#fff, "bc-regular", 1.1rem, none);
   }
   .btn-close {
+    @include font-details(#fff, Arial, 1.1rem, uppercase);
+    text-decoration: none;
+    font-weight: 700;
     border: none;
     width: 1.2rem;
     background-color: transparent;
