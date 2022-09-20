@@ -5,6 +5,7 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
+
 // MENU HIDE ON SCROLL + SHOW ARROW UP
 window.addEventListener("scroll", () => {
   const scrollPage = window.scrollY;
@@ -19,11 +20,6 @@ window.addEventListener("scroll", () => {
     arrowUp.classList.remove("fade-in");
   }
 });
-
-// submitBox.classList.add("fill");
-//     setTimeout(() => {
-//       submitBox.classList.remove("fill");
-//     }, 3500);
 
 // ON LOAD WINDOW
 const loader = document.querySelector("#preloader");

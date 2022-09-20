@@ -10,14 +10,6 @@
   </head>
   <body id="top">
     <div id="preloader"></div>
-    <div class="submit-background">
-      <section class="submit-box">
-        <p class="submit-title">We'll be the perfect blend!</p>
-        <p class="submit-subtitle">We're sending you a whole latte love.</p>
-        <img class="submit-cup" src="./ICON/cup.png" alt="Coffee Cup" />
-        <div class="fill-cup"></div>
-      </section>
-    </div>
     <div class="news-blur">
       <div class="news-big-box">
         <div class="news-box">
@@ -28,7 +20,12 @@
             <p class="news-text">
               Get 10% off your next order just by signing up!
             </p>
-            <form name="Newsletter" method="POST" data-netlify="true">
+            <form
+              action="/src/success.html"
+              name="Newsletter Modal"
+              method="POST"
+              data-netlify="true"
+            >
               <label class="news-text title" for="subscribeName">NAME</label>
               <input
                 name="Name"
@@ -189,7 +186,7 @@
         <img src="./ICON/LW.png" alt="CAIMAC COFFEE" class="footer-WL" />
       </section>
       <form
-        name="newsletter"
+        name="Newsletter"
         class="footer-newsletter"
         method="POST"
         data-netlify="true"
