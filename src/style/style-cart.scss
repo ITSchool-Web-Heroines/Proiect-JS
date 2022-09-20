@@ -91,23 +91,29 @@ select#blend-game {
     background: url(/src/ICON/AU.png) 98% / 7% no-repeat #fff;
   }
 }
-.game-result,
-.game-search {
-  display: none;
+.result-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  div {
+    display: none;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    &.active {
+      display: block;
+      .game-outcome {
+        @include center-box();
+        gap: 0.2rem;
+        @include font-details(#fff, "bc-medium", 1.7rem, none);
+        .blend-title {
+          text-transform: uppercase;
+          box-shadow: inset 0rem -0.7rem 0rem -0.6rem #fff;
+        }
+      }
+    }
+  }
+}
+.game-result {
   width: 17rem;
   height: 17rem;
-}
-.game-result.search {
-  background: #000;
-  display: block;
-}
-.game-outcome {
-  @include center-box();
-  gap: 0.2rem;
-  display: none;
-  @include font-details(#fff, "bc-medium", 1.7rem, none);
-  .blend-title {
-    text-transform: uppercase;
-    box-shadow: inset 0rem -0.7rem 0rem -0.6rem #fff;
-  }
 }
