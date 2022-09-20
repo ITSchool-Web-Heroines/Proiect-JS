@@ -19,23 +19,11 @@ window.addEventListener("scroll", () => {
     arrowUp.classList.remove("fade-in");
   }
 });
-// SUBSCRIBE
-/*const formInputs = document.querySelectorAll("input");
-const submitForms = document.querySelectorAll("form");
-const submitBox = document.querySelector(".submit-background");
-submitForms.forEach(submitForm => {
-  submitForm.addEventListener("submit", event => {
-    // event.preventDefault();
-    submitBox.classList.add("fill");
-    setTimeout(() => {
-      submitBox.classList.remove("fill");
-    }, 3500);
-    // formInputs.forEach(formInput => {
-    //   console.log(formInput.value);
-    //   formInput.value = "";
-    // });
-  });
-});*/
+
+// submitBox.classList.add("fill");
+//     setTimeout(() => {
+//       submitBox.classList.remove("fill");
+//     }, 3500);
 
 // ON LOAD WINDOW
 const loader = document.querySelector("#preloader");
