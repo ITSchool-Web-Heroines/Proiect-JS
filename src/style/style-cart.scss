@@ -17,26 +17,97 @@
 main * {
   @include animation-fade-in();
 }
+// COMMON
+.cart-title,
+.cart-game-title {
+  text-align: center;
+  @include font-details(#fff, "bc-medium", 2rem, uppercase);
+}
+.cart-subtitle,
+.cart-game-subtitle {
+  @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
+  text-align: center;
+}
+// SHOP BAG
 .shop-cart {
   width: 5rem;
   height: auto;
 }
-.cart-title {
-  @include font-details(#fff, "bc-medium", 2rem, uppercase);
-}
 main {
   margin-block: 1rem;
   @include center-box();
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .empty-cart {
   @include center-box();
   gap: 1rem;
-  .cart-subtitle {
-    @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
-  }
   .content-button {
     width: 13rem;
     text-align: center;
+  }
+}
+// GAME
+a.divider-cart {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 65%;
+}
+.game-box {
+  @include center-box();
+  gap: 0.5rem;
+  width: 19rem;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  @media (min-width: 550px) {
+    width: 30rem;
+  }
+}
+.blend-game {
+  @include center-box();
+  gap: 1rem;
+}
+.game-select {
+  @include font-details(#fff, "bc-regular", 1.5rem, uppercase);
+  text-align: center;
+}
+select#blend-game {
+  overflow: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.3rem;
+  background: url(/src/ICON/AD.png) 98% / 7% no-repeat #fff;
+  border: 0.2rem solid #000;
+  outline: 0.2rem solid #fff;
+  width: 18rem;
+  text-align: center;
+  @include font-details(#000, "bc-medium", 1.2rem, none);
+  &:focus,
+  &:focus-within {
+    background: url(/src/ICON/AU.png) 98% / 7% no-repeat #fff;
+  }
+}
+.game-result,
+.game-search {
+  display: none;
+  width: 17rem;
+  height: 17rem;
+}
+.game-result.search {
+  background: #000;
+  display: block;
+}
+.game-outcome {
+  @include center-box();
+  gap: 0.2rem;
+  display: none;
+  @include font-details(#fff, "bc-medium", 1.7rem, none);
+  .blend-title {
+    text-transform: uppercase;
+    box-shadow: inset 0rem -0.7rem 0rem -0.6rem #fff;
   }
 }
