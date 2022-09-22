@@ -35,16 +35,11 @@ section,
 }
 .location-title,
 .contact-title {
-  color: #000;
-  font-family: "bc-medium", sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  @include font-details(#000, "bc-medium", 1.5rem, uppercase);
 }
 .location-text,
 .contact-text {
-  color: #000;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1.2rem;
+  @include font-details(#000, "bc-regular", 1.2rem, none);
   text-align: justify;
 }
 .map {
@@ -68,20 +63,40 @@ a.divider-contact {
 .name-input,
 .email-input,
 .phone-input,
-.message-input,
-textarea {
+.message-input {
   width: 18rem;
   padding: 0.5rem;
   border: 0.1rem solid #000;
-  font-family: "bc-regular", sans-serif;
-  font-size: 1rem;
-  resize: none;
+  @include font-details(#000, "bc-regular", 1rem, none);
+}
+input,
+textarea {
+  &::placeholder {
+    opacity: 0;
+  }
+  &.empty-box {
+    &::placeholder {
+      opacity: 0.8;
+      transition: opacity 1s;
+      @include font-details(#a00000, "bc-medium", 1rem, uppercase);
+    }
+  }
+}
+#checkbox-one,
+#checkbox-two {
+  opacity: 1;
+  &.empty-box {
+    opacity: 0.8;
+    transition: opacity 1s;
+    border: 0.15rem solid #a00000;
+  }
 }
 textarea {
   scrollbar-color: #000 transparent;
   overflow: scroll;
   height: 10rem;
   padding-block-end: 0rem;
+  resize: none;
 }
 textarea::-webkit-scrollbar {
   width: 0.25rem;

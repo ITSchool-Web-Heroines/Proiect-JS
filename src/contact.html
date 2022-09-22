@@ -9,14 +9,6 @@
   </head>
   <body id="top">
     <div id="preloader"></div>
-    <div class="submit-background">
-      <section class="submit-box">
-        <p class="submit-title">We'll be the perfect blend!</p>
-        <p class="submit-subtitle">We're sending you a whole latte love.</p>
-        <img class="submit-cup" src="./ICON/cup.png" alt="Coffee Cup" />
-        <div class="fill-cup"></div>
-      </section>
-    </div>
     <div class="banner-box">
       <p class="banner-text">FREE SHIPPING ON ORDERS OVER 50$</p>
       <button type="button" class="btn-close">x</button>
@@ -87,53 +79,52 @@
       </section>
       <a href="#contact-form" class="divider-contact">&#9632;</a>
       <form
-        name="contact"
+        name="Contact"
         class="contact-form"
         id="contact-form"
         method="POST"
         data-netlify="true"
       >
-        <div class="name-box">
-          <label class="contact-title" for="name">Name</label>
+        <label class="contact-title">
+          Name
           <input
             name="Name"
-            class="name-input"
-            id="name"
+            class="name-input text-input"
             type="text"
-            required
+            placeholder="This field is required"
           />
-        </div>
-        <div class="email-box">
-          <label class="contact-title" for="email">Email</label>
+        </label>
+        <label class="contact-title">
+          Email
           <input
             name="Email"
-            class="email-input"
-            id="email"
+            class="email-input text-input"
             type="email"
-            required
+            placeholder="This field is required"
           />
-        </div>
-        <div class="phone-box">
-          <label class="contact-title" for="phone">Phone</label>
+        </label>
+        <label class="contact-title">
+          Phone
           <input
             name="Phone"
-            class="phone-input"
-            id="phone"
+            class="phone-input text-input"
             type="tel"
-            required
+            placeholder="This field is required"
           />
-        </div>
-        <div class="msg-box">
-          <label class="contact-title" for="msg">Message</label>
-          <textarea class="message-input" id="msg" required></textarea>
-        </div>
+        </label>
+        <label class="contact-title">
+          Message
+          <textarea
+            class="message-input text-input"
+            placeholder="This field is required"
+          ></textarea>
+        </label>
         <div class="check-box">
           <input
             name="Terms and Conditions"
             id="checkbox-one"
             type="checkbox"
             value=""
-            required
           />
           <label class="contact-text" for="checkbox-one">
             I have read the terms and conditions.
@@ -145,7 +136,6 @@
             id="checkbox-two"
             type="checkbox"
             value=""
-            required
           />
           <label class="contact-text" for="checkbox-two">
             I accept the Privacy Policy.
@@ -160,7 +150,7 @@
         <img src="./ICON/LB.png" alt="CAIMAC COFFEE" class="footer-WL" />
       </section>
       <form
-        name="newsletter"
+        name="Newsletter Footer"
         class="footer-newsletter"
         method="POST"
         data-netlify="true"
@@ -202,5 +192,6 @@
     <script src="./javascript/all.js" type="module"></script>
     <script src="./javascript/banner.js" type="module"></script>
     <script src="./javascript/bagItem.js" type="module"></script>
+    <script src="./javascript/contact.js" type="module"></script>
   </body>
 </html>
