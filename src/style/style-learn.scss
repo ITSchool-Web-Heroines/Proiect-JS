@@ -57,6 +57,7 @@ div.about-text,
 .roast-title,
 .about-subtitle,
 .roast-subtitle {
+  text-align: center;
   @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
 }
 .source-text,
@@ -189,6 +190,85 @@ div.about-text.active {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+}
+// GAME
+.cart-game-title {
+  text-align: center;
+}
+a.divider-learn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 65%;
+}
+.game-box {
+  @include center-box();
+  gap: 0.5rem;
+  width: 19rem;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  @media (min-width: 550px) {
+    width: 30rem;
+  }
+}
+.blend-game {
+  @include center-box();
+  gap: 1rem;
+}
+.game-select {
+  @include font-details(#fff, "bc-regular", 1.5rem, uppercase);
+  text-align: center;
+}
+select#blend-game {
+  overflow: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.3rem;
+  background: url(/src/ICON/AD.png) 98% / 7% no-repeat #fff;
+  border: 0.2rem solid #000;
+  outline: 0.2rem solid #fff;
+  width: 18rem;
+  text-align: center;
+  @include font-details(#000, "bc-medium", 1.2rem, none);
+  &:focus,
+  &:focus-within {
+    background: url(/src/ICON/AU.png) 98% / 7% no-repeat #fff;
+  }
+}
+.result-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  div {
+    display: none;
+    &.active {
+      display: grid;
+      gap: 0.3rem;
+      justify-items: center;
+      height: 25rem;
+      align-content: space-evenly;
+      .game-outcome {
+        @include center-box();
+        gap: 0.2rem;
+        @include font-details(#fff, "bc-regular", 1.5rem, none);
+        .blend-title {
+          text-transform: uppercase;
+          box-shadow: inset 0rem -0.7rem 0rem -0.6rem #fff;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.game-result {
+  width: 17rem;
+  height: 17rem;
 }
 
 @media (min-width: 350px) {
