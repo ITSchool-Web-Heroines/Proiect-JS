@@ -13,8 +13,10 @@ function displayCart() {
         <div class="product"> 
           <div class="title">
             <img src="${item.tag}">
-            <p>${item.name}</p>
-            <p class="specs">${item.specs}</p>
+            <div> 
+              <p>${item.name}</p>
+              <p class="specs">${item.specs}</p>
+            </div>
           </div>
           <p class="price">$${item.price}.00</p>
           <p class="quantity">${item.inCart}</p>
