@@ -16,7 +16,7 @@
     <nav class="navbar">
       <a href="./index.html" style="text-decoration: none">
         <img
-          src="./ICON/LW.png"
+          src="./ICON/LB.png"
           alt="CAIMAC COFFEE"
           class="nav-branding logo"
         />
@@ -42,23 +42,28 @@
         <li class="nav-item">
           <div class="counter"></div>
           <a href="./cart.html">
-            <img src="./ICON/SW.png" alt="Shopping Cart" class="shop-logo" />
+            <img src="./ICON/SB.png" alt="Shopping Cart" class="shop-logo" />
           </a>
         </li>
       </ul>
     </nav>
     <main>
-      <img src="./ICON/SW.png" alt="Shopping Cart" class="shop-cart" />
+      <img src="./ICON/SB.png" alt="Shopping Cart" class="shop-cart" />
       <p class="cart-title">BAG OF GOODIES</p>
-      <section class="empty-cart">
-        <p class="cart-subtitle">Your bag is currently empty.</p>
-        <a href="shop.html" class="content-button">continue shopping &rarr;</a>
+      <section class="products-box">
+        <div class="product-header">
+          <p class="title">PRODUCT</p>
+          <p class="price">Price</p>
+          <p class="quantity">qty.</p>
+          <p class="total">total</p>
+        </div>
+        <div class="products"></div>
       </section>
     </main>
     <footer class="footer-box">
       <section class="footer-logo-box">
-        <img src="./ICON/PLW.png" alt="Caimac Logo" class="footer-PL" />
-        <img src="./ICON/LW.png" alt="CAIMAC COFFEE" class="footer-WL" />
+        <img src="./ICON/PLB.png" alt="Caimac Logo" class="footer-PL" />
+        <img src="./ICON/LB.png" alt="CAIMAC COFFEE" class="footer-WL" />
       </section>
       <form
         name="Newsletter Footer"
@@ -97,11 +102,12 @@
     </footer>
     <nav class="back-top empty">
       <a class="back-top-btn" href="#top">
-        <img class="back-top-img" src="./ICON/AW.png" alt="GO UP" />
+        <img class="back-top-img" src="./ICON/AB.png" alt="GO UP" />
       </a>
     </nav>
     <script src="./javascript/all.js" type="module"></script>
     <script src="./javascript/banner.js" type="module"></script>
     <script src="./javascript/bagItem.js" type="module"></script>
+    <script src="./javascript/cart.js" type="module"></script>
   </body>
 </html>

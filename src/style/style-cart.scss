@@ -1,29 +1,30 @@
 @use "../mixin.scss" as *;
 
 :root {
-  --scroll-color: #fff;
-  --body-bck-color: #000;
+  --scroll-color: #000;
+  --body-bck-color: #fff;
   --navmenu-top: 2.5rem;
-  --menu-link-color: #fff;
-  --hambmenu-color: #fff;
-  --side-menu-bck-color: #000;
-  --button-bcg-color: #fff;
-  --button-color: #000;
-  --navbar-border-color: #fff;
-  --footer-color: #fff;
-  --shopbag-color: #fff;
+  --menu-link-color: #000;
+  --hambmenu-color: #000;
+  --side-menu-bck-color: #fff;
+  --button-bcg-color: #000;
+  --button-color: #fff;
+  --navbar-border-color: #000;
+  --footer-color: #000;
+  --shopbag-color: #000;
   --submit-form-fill: translate(-0.1rem, 4.7rem);
 }
 main * {
   @include animation-fade-in();
 }
+
 // COMMON
 .cart-title {
   text-align: center;
-  @include font-details(#fff, "bc-medium", 2rem, uppercase);
+  @include font-details(#000, "bc-medium", 2rem, uppercase);
 }
 .cart-subtitle {
-  @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
+  @include font-details(#000, "bc-medium", 1.7rem, uppercase);
   text-align: center;
 }
 // SHOP BAG
@@ -42,5 +43,101 @@ main {
   .content-button {
     width: 13rem;
     text-align: center;
+  }
+}
+
+// PRODUCTS
+.products-box {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  align-items: center;
+  .product-header {
+    display: flex;
+    flex-direction: row;
+    width: 18rem;
+    justify-content: space-between;
+    border-block-end: 0.1rem solid #000;
+    p {
+      padding-block: 1rem;
+      text-align: center;
+    }
+    .title {
+      width: 8rem;
+    }
+    .price {
+      width: 4rem;
+    }
+    .quantity {
+      width: 2.5rem;
+    }
+    .total {
+      width: 3.5rem;
+    }
+    p {
+      text-align: center;
+      @include font-details(#000, "bc-medium", 1.3rem, uppercase);
+    }
+  }
+}
+.products {
+  .total-cart {
+    padding: 0.5rem;
+    display: flex;
+    width: 18rem;
+    flex-direction: column;
+    align-items: flex-end;
+    .title {
+      @include font-details(#000, "bc-medium", 1.5rem, uppercase);
+      letter-spacing: 2px;
+    }
+    .total {
+      @include font-details(#000, "bc-medium", 1.3rem, uppercase);
+    }
+  }
+  .cart-result {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    width: 18rem;
+    justify-content: space-between;
+  }
+}
+.product {
+  border-block-end: 0.1rem solid #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 18rem;
+  padding-block: 1rem;
+  p {
+    text-align: center;
+    @include font-details(#000, "bc-medium", 1.3rem, uppercase);
+  }
+  .title {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+    width: 8rem;
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
+    .specs {
+      @include font-details(#000, "bc-regular", 1.3rem, capitalize);
+    }
+  }
+  .price {
+    text-align: center;
+    width: 4rem;
+  }
+  .quantity {
+    text-align: center;
+    width: 2.5rem;
+  }
+  .total {
+    text-align: center;
+    width: 3.5rem;
   }
 }

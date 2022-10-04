@@ -6,10 +6,10 @@ const indexTitle = document.querySelector("p.subtitle.title");
 const indexSubtitle = document.querySelector("p.subtitle.sub-title");
 
 function showModal() {
-  sessionStorage.setItem("modalShown", 1);
+  localStorage.setItem("modalShown", 1);
 }
 function hideModal() {
-  let modalIsShown = sessionStorage.getItem("modalShown");
+  let modalIsShown = localStorage.getItem("modalShown");
   if (modalIsShown > 0) {
     newsBox.style.display = "none";
   }
