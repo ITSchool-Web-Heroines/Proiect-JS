@@ -6,8 +6,10 @@ function displayCart() {
   cartItems = JSON.parse(cartItems);
   let productContainer = document.querySelector(".products");
   let productHeader = document.querySelector(".product-header");
+  const orderForm = document.getElementById("order-form");
 
   if (cartItems && productContainer) {
+    orderForm.style.opacity = "1";
     productContainer.innerHTML = "";
     Object.values(cartItems).map(item => {
       productContainer.innerHTML += `
@@ -67,7 +69,7 @@ emptyButton.addEventListener("click", () => {
   let productContainer = document.querySelector(".products");
   let productHeader = document.querySelector(".product-header");
   const counter = document.querySelector(".counter");
-
+  orderForm.style.opacity = "0";
   localStorage.removeItem("productsInCart");
   localStorage.removeItem("totalCost");
   localStorage.removeItem("cartNumbers");
