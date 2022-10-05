@@ -79,35 +79,36 @@ main {
     }
   }
 }
-.products {
-  .order-details {
-    width: 18rem;
-    display: grid;
-    padding-inline: 0.5rem;
-    justify-items: end;
-    gap: 0.5rem;
-    .order-title {
-      text-align: end;
+.order-details {
+  width: 18rem;
+  display: grid;
+  padding-inline: 0.5rem;
+  justify-items: center;
+  gap: 0.5rem;
+  .order-title {
+    text-align: center;
+    width: 17rem;
+    @include font-details(#000, "bc-medium", 1.5rem, uppercase);
+    .text-input {
       width: 17rem;
-      @include font-details(#000, "bc-medium", 1.5rem, uppercase);
-      .text-input {
-        width: 17rem;
-        padding: 0.5rem;
-        border: 0.1rem solid #000;
-        @include font-details(#000, "bc-regular", 1rem, none);
+      padding: 0.5rem;
+      margin: 0.5rem;
+      border: 0.1rem solid #000;
+      @include font-details(#000, "bc-regular", 1rem, none);
+      &::placeholder {
+        opacity: 0;
+      }
+      &.empty-box {
         &::placeholder {
-          opacity: 0;
-        }
-        &.empty-box {
-          &::placeholder {
-            opacity: 0.8;
-            transition: opacity 1s;
-            @include font-details(#a00000, "bc-medium", 1rem, uppercase);
-          }
+          opacity: 0.8;
+          transition: opacity 1s;
+          @include font-details(#a00000, "bc-medium", 1rem, uppercase);
         }
       }
     }
   }
+}
+.products {
   .total-cart {
     padding: 0.5rem;
     display: flex;
@@ -283,7 +284,7 @@ main {
   .products .total-cart,
   .products .cart-result,
   .product,
-  .products .order-details {
+  .order-details {
     width: 30rem;
   }
   .products-box .product-header,
@@ -334,7 +335,7 @@ main {
   .products .total-cart,
   .products .cart-result,
   .product,
-  .products .order-details {
+  .order-details {
     width: 43rem;
   }
   .products-box .product-header,

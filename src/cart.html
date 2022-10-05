@@ -59,6 +59,35 @@
         </div>
         <div class="products"></div>
       </section>
+      <form
+        name="Order"
+        class="products order-details"
+        id="order-form"
+        method="POST"
+        data-netlify="true"
+      >
+        <label class="order-title">
+          Name
+          <input
+            name="Name"
+            class="text-input"
+            type="text"
+            placeholder="This field is required"
+          />
+        </label>
+        <label class="order-title">
+          Email
+          <input
+            name="Email"
+            class="text-input"
+            type="email"
+            placeholder="This field is required"
+          />
+        </label>
+        <button class="content-button submit-btn" type="submit">
+          Submit Order
+        </button>
+      </form>
     </main>
     <footer class="footer-box">
       <section class="footer-logo-box">

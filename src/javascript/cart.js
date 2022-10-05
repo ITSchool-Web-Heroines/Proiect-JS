@@ -29,36 +29,7 @@ function displayCart() {
       <div class="total-cart">
         <p class="title">Cart Total</p>
         <p class="total">$${cartCost}.00</p>
-      </div>
-      <form
-        name="Order"
-        class="products order-details"
-        id="order-form"
-        method="POST"
-        data-netlify="true"
-      > 
-        <label class="order-title">
-          Name
-          <input
-            name="Name"
-            class="text-input"
-            type="text"
-            placeholder="This field is required"
-          />
-        </label>
-        <label class="order-title">
-          Email
-          <input
-            name="Email"
-            class="text-input"
-            type="email"
-            placeholder="This field is required"
-          />
-        </label>
-        <button class="content-button submit-btn" type="submit">Submit Order</button>
-        </form>
-      <div class="total-cart">
-        <button class="content-button empty" "type="button">Empty Cart</button>
+        <button class="content-button empty" type="button">Empty Cart</button>
       </div>
       `;
   } else {
