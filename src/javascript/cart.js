@@ -1,3 +1,4 @@
+//________________________SHOW CART_________________________________
 function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   let cartCost = localStorage.getItem("totalCost");
@@ -29,10 +30,38 @@ function displayCart() {
         <p class="title">Cart Total</p>
         <p class="total">$${cartCost}.00</p>
       </div>
-      <div class="cart-result">
-        <button class="content-button empty" "type="button">Empty Cart</button>
-        <button class="content-button submit" type="button">Submit Order</button>
-      </div>
+      <form
+          name="Order"
+          class="products"
+          id="order-form"
+          method="POST"
+          data-netlify="true"
+      >
+        <div class="order-details">
+          <label class="order-title">
+            Name
+            <input
+              name="Name"
+              class="text-input"
+              type="text"
+              placeholder="This field is required"
+            />
+          </label>
+          <label class="order-title">
+            Email
+            <input
+              name="Email"
+              class="text-input"
+              type="email"
+              placeholder="This field is required"
+            />
+          </label>
+        </div>
+        <div class="cart-result">
+          <button class="content-button empty" "type="button">Empty Cart</button>
+          <button class="content-button submit-btn" type="submit">Submit Order</button>
+        </div>
+      </form>
       `;
   } else {
     productHeader.style.display = "none";
@@ -45,3 +74,44 @@ function displayCart() {
   }
 }
 displayCart();
+//________________________SUMBIT ORDER_________________________________
+const inputValues = document.querySelectorAll(".text-input");
+const orderForm = document.getElementById("order-form");
+
+orderForm.addEventListener("submit", event => {
+  inputValues.forEach(inputValue => {
+    if (inputValue.value === "") {
+      event.preventDefault();
+      inputValue.classList.add("empty-box");
+    } else {
+      return true;
+    }
+  });
+  localStorage.removeItem("productsInCart");
+  localStorage.removeItem("totalCost");
+  localStorage.removeItem("cartNumbers");
+});
+//________________________EMPTY CART_________________________________
+import cup from "../ICON/cup.png";
+const emptyButton = document.querySelector("button.empty");
+emptyButton.addEventListener("click", () => {
+  let productContainer = document.querySelector(".products");
+  let productHeader = document.querySelector(".product-header");
+  const counter = document.querySelector(".counter");
+
+  localStorage.removeItem("productsInCart");
+  localStorage.removeItem("totalCost");
+  localStorage.removeItem("cartNumbers");
+
+  counter.textContent = "";
+  productHeader.style.display = "none";
+  productContainer.innerHTML = `
+    <section class="empty-box fill">
+      <p class="empty-title">C'mon, give us a shot!</p>
+      <p class="empty-subtitle">We promise you won't regret it.</p> 
+      <a href="shop.html" class="content-button">continue shopping &rarr;</a>
+      <img class="empty-cup" src="${cup}" alt="Coffee Cup" />
+      <div class="fill-cup"></div>
+    </section>
+     `;
+});
