@@ -317,11 +317,9 @@ main {
   .product .title .specs {
     font-size: 1.5rem;
   }
-  .cart-result {
-    .content-button {
-      font-size: 1.5rem;
-      width: 9rem;
-    }
+  .content-button {
+    font-size: 1.5rem;
+    width: 9rem;
   }
   .products .total-cart {
     .title,
@@ -366,7 +364,7 @@ main {
       grid-column: 2/3;
     }
   }
-  .cart-result .content-button {
+  .content-button {
     width: 11rem;
     padding: 0.8rem;
   }

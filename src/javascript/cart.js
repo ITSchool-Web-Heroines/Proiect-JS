@@ -31,37 +31,35 @@ function displayCart() {
         <p class="total">$${cartCost}.00</p>
       </div>
       <form
-          name="Order"
-          class="products"
-          id="order-form"
-          method="POST"
-          data-netlify="true"
-      >
-        <div class="order-details">
-          <label class="order-title">
-            Name
-            <input
-              name="Name"
-              class="text-input"
-              type="text"
-              placeholder="This field is required"
-            />
-          </label>
-          <label class="order-title">
-            Email
-            <input
-              name="Email"
-              class="text-input"
-              type="email"
-              placeholder="This field is required"
-            />
-          </label>
-        </div>
-        <div class="cart-result">
-          <button class="content-button empty" "type="button">Empty Cart</button>
-          <button class="content-button submit-btn" type="submit">Submit Order</button>
-        </div>
-      </form>
+        name="Order"
+        class="products order-details"
+        id="order-form"
+        method="POST"
+        data-netlify="true"
+      > 
+        <label class="order-title">
+          Name
+          <input
+            name="Name"
+            class="text-input"
+            type="text"
+            placeholder="This field is required"
+          />
+        </label>
+        <label class="order-title">
+          Email
+          <input
+            name="Email"
+            class="text-input"
+            type="email"
+            placeholder="This field is required"
+          />
+        </label>
+        <button class="content-button submit-btn" type="submit">Submit Order</button>
+        </form>
+      <div class="total-cart">
+        <button class="content-button empty" "type="button">Empty Cart</button>
+      </div>
       `;
   } else {
     productHeader.style.display = "none";
