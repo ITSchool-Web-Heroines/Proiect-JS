@@ -31,7 +31,7 @@ function displayCart() {
       <div class="total-cart">
         <p class="title">Cart Total</p>
         <p class="total">$${cartCost}.00</p>
-        <button class="content-button empty" type="button">Empty Cart</button>
+        <a href="#top" class="content-button empty">Empty Cart</a>
       </div>
       `;
   } else {
@@ -64,7 +64,7 @@ orderForm.addEventListener("submit", event => {
 });
 //________________________EMPTY CART_________________________________
 import cup from "../ICON/cup.png";
-const emptyButton = document.querySelector("button.empty");
+const emptyButton = document.querySelector("a.content-button.empty");
 emptyButton.addEventListener("click", () => {
   let productContainer = document.querySelector(".products");
   let productHeader = document.querySelector(".product-header");

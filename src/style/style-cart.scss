@@ -88,7 +88,7 @@ main {
   gap: 0.5rem;
   .order-title {
     text-align: center;
-    width: 17rem;
+    width: 18rem;
     @include font-details(#000, "bc-medium", 1.5rem, uppercase);
     .text-input {
       width: 17rem;
@@ -121,6 +121,9 @@ main {
     }
     .total {
       @include font-details(#000, "bc-medium", 1.3rem, uppercase);
+    }
+    a.content-button.empty {
+      text-align: center;
     }
   }
   .cart-result {
@@ -207,7 +210,9 @@ main {
     padding: 0.5rem;
   }
   .content-button {
+    text-align: center;
     width: 12rem;
+    font-size: 1.3rem;
   }
 }
 .empty-box.fill {
