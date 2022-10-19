@@ -1,0 +1,32 @@
+@use "../mixin.scss" as *;
+
+:root {
+  --scroll-color: #000;
+  --body-bck-color: #fff;
+  --navmenu-top: 2.5rem;
+  --menu-link-color: #000;
+  --hambmenu-color: #000;
+  --side-menu-bck-color: #fff;
+  --button-bcg-color: #000;
+  --button-color: #fff;
+  --navbar-border-color: #000;
+  --footer-color: #000;
+  --shopbag-color: #000;
+}
+main * {
+  @include animation-fade-in();
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.logo {
+  width: 8rem;
+  height: auto;
+}
+.success-title {
+  text-align: center;
+  @include font-details(#000, "bc-medium", 2rem, uppercase);
+}
