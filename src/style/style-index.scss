@@ -1,0 +1,440 @@
+@use "../mixin.scss" as *;
+
+:root {
+  --scroll-color: #fff;
+  --body-bck-color: #000;
+  --navmenu-top: 0rem;
+  --menu-link-color: #fff;
+  --hambmenu-color: #fff;
+  --side-menu-bck-color: rgba(0, 0, 0, 0.8);
+  --navbar-border-color: transparent;
+  --button-bcg-color: #fff;
+  --button-color: #000;
+  --footer-color: #fff;
+  --shopbag-color: #fff;
+}
+
+/* MENU - SUBMENU */
+/* ICONS */
+.logo-box {
+  align-self: start;
+}
+.logo-menu {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../IMG/INDEX/background.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  inset: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* SUBTITLE */
+p.subtitle {
+  text-align: center;
+  padding-inline: 0.5rem;
+  padding-block-end: 0.2rem;
+}
+div.subtitle-box {
+  width: 100%;
+  height: 8rem;
+  background-image: linear-gradient(0deg, #000 80%, #0000);
+  display: grid;
+  align-content: center;
+}
+p.subtitle.title {
+  @include animation-fade-in();
+  @include font-details(#fff, "bc-medium", 2rem, uppercase);
+}
+p.subtitle.sub-title {
+  @include animation-fade-in();
+  @include font-details(#fff, "bc-medium", 1.7rem, uppercase);
+}
+/* MAIN CONTENT */
+main {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+section.about-box {
+  padding: 0rem 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+.logo-subtitle,
+.text-button {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.pic-logo {
+  width: 10rem;
+}
+.about-box p,
+.coffee-box p,
+.location-box p {
+  text-align: center;
+}
+p.about-text,
+p.coffee-text,
+p.location-text {
+  @include font-details(#fff, "bc-regular", 1.2rem, none);
+}
+p.about-title,
+p.coffee-title,
+p.location-title {
+  @include font-details(#fff, "bc-medium", 1.5rem, uppercase);
+  width: 10rem;
+}
+.location-box {
+  padding: 0rem 1rem;
+}
+.index-button {
+  height: fit-content;
+  background-color: #fff;
+  padding: 0.5rem 0.75rem;
+  margin-block: 0.5rem;
+  text-decoration: none;
+  @include font-details(#000, "bc-medium", 1.3rem, uppercase);
+  position: relative;
+  transition: background-color ease-in 0.2s;
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.index-button {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0rem;
+    height: 0.1rem;
+    inset-inline-start: 50%;
+    background-color: #fff;
+    transition: all ease-in-out 0.3s;
+  }
+  &:hover {
+    &::after,
+    &::before {
+      width: 100%;
+      inset-inline-start: 0;
+    }
+  }
+  &:focus::after,
+  &:focus::before,
+  &:focus-within::after,
+  &:focus-within::before {
+    width: 100%;
+    inset-inline-start: 0;
+  }
+}
+a.index-button {
+  &::after {
+    inset-block-end: 0rem;
+  }
+  &::before {
+    inset-block-start: 0.1rem;
+  }
+}
+.coffee-box,
+.location-box {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+.coffee-text-box {
+  padding: 0rem 1rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+.coffee-pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+.coffee-img {
+  width: inherit;
+  height: auto;
+}
+section.location-box {
+  width: 100vw;
+}
+.location-img {
+  width: 100%;
+  height: auto;
+}
+/* NEWS AD */
+.news-blur {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  animation: newsletter-ani 0.5s ease-in;
+}
+@keyframes newsletter-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.news-big-box {
+  opacity: 1;
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  z-index: 5;
+  width: 90vw;
+  max-width: 20rem;
+  background-color: #fff;
+  animation: newsletter-ani 0.8s ease-in;
+}
+.fade-box {
+  opacity: 0;
+}
+.news-fade-out {
+  animation: news-fade-out 0.5s ease-in;
+}
+@keyframes news-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.news-box {
+  border: 0.1rem solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.news-text.title {
+  font-family: "bc-medium", sans-serif;
+}
+.text-box,
+.text-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.news-img {
+  width: 9rem;
+  height: auto;
+}
+.news-text,
+.ad-news-submit,
+.input-ad-email,
+.input-ad-name {
+  @include font-details(#000, "bc-regular", 1.2rem, uppercase);
+  text-align: center;
+}
+.news-btn-x {
+  @include font-details(#000, Arial, 1.3rem, uppercase);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  padding-block-start: 0.07rem;
+  border: 0.1rem solid #000;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  transform: translate(50%, -50%);
+  border-radius: 5rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: #fff;
+  box-shadow: 0rem 0rem 0.2rem 0rem #000;
+}
+.input-ad-email,
+.input-ad-name {
+  border: 0.1rem solid #000;
+  padding: 0.3rem;
+  width: 14rem;
+}
+.ad-news-submit {
+  border: none;
+  margin-block-start: 0.5rem;
+  padding: 0.5rem;
+  background-color: #000;
+  color: #fff;
+  width: 7rem;
+  transition: 0.3s;
+}
+.ad-news-submit {
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 0 0 0.1rem #000 inset;
+    color: #000;
+  }
+}
+.news-btn-x:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+// MEDIA QUERYS
+@media (max-height: 550px) {
+  .news-big-box {
+    max-width: none;
+    width: 25rem;
+  }
+  .news-box {
+    flex-direction: row;
+    gap: 0rem;
+    padding: 0.5rem;
+  }
+  .news-img {
+    width: 6.3rem;
+  }
+  .text-box {
+    gap: 0.3rem;
+  }
+  .news-text,
+  .ad-news-submit,
+  .input-ad-email,
+  .input-ad-name {
+    font-size: 0.85rem;
+  }
+  .input-ad-email,
+  .input-ad-name {
+    width: 10rem;
+  }
+  .news-btn-x {
+    @include font-details(#000, Arial, 1rem, uppercase);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-block-start: 0.2rem;
+  }
+}
+@media (min-width: 600px) {
+  main {
+    width: 100vw;
+    gap: 0.5rem;
+  }
+  p.subtitle.title {
+    font-size: 2.5rem;
+  }
+  p.subtitle.sub-title {
+    font-size: 2rem;
+  }
+  .about-text {
+    max-width: 30rem;
+  }
+  .coffee-box,
+  .location-box {
+    width: 100vw;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+  }
+  .coffee-text-box,
+  .location-box .text-button {
+    width: 17rem;
+    align-content: center;
+    padding: 0;
+  }
+  .coffee-pics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 99%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+@media (min-width: 900px) {
+  p.subtitle.title {
+    font-size: 3rem;
+  }
+  p.subtitle.sub-title {
+    font-size: 2.5rem;
+  }
+  div.subtitle-box {
+    height: 10rem;
+    background-image: linear-gradient(0deg, #000 75%, transparent);
+  }
+  p.about-title,
+  p.coffee-title,
+  p.location-title {
+    font-size: 1.7rem;
+    width: 17rem;
+  }
+  p.about-text,
+  p.coffee-text,
+  p.location-text {
+    font-size: 1.5rem;
+  }
+  .coffee-text-box,
+  .location-box .text-button {
+    width: 25rem;
+  }
+}
+@media (min-width: 1300px) {
+  .about-text {
+    max-width: 50rem;
+  }
+  .coffee-pics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+  img.coffee-img.nine {
+    display: none;
+  }
+
+  .coffee-text-box,
+  .location-box .text-button {
+    width: 45rem;
+  }
+  .coffee-box,
+  .location-box {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .location-img {
+    width: 50%;
+    height: auto;
+  }
+  main {
+    gap: 1rem;
+  }
+}
+@media (min-width: 1700px) {
+  .coffee-pics {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 100%;
+  }
+  img.coffee-img.nine {
+    display: block;
+  }
+  .coffee-text-box,
+  .location-box .text-button {
+    width: 38rem;
+  }
+  .logo-subtitle,
+  .text-button {
+    gap: 1rem;
+  }
+}

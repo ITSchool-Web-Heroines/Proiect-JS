@@ -1,0 +1,42 @@
+:root {
+  --product-size: 18rem;
+}
+@mixin center-box {
+  display: grid;
+  justify-items: center;
+}
+@mixin font-details($color, $family, $size, $transform) {
+  color: $color;
+  font-family: $family, sans-serif;
+  font-size: $size;
+  text-transform: $transform;
+}
+
+@mixin animation-fade-in {
+  animation: animation-fade-in 0.5s linear;
+  @keyframes animation-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin details-style($color) {
+  background-color: $color;
+  text-align: center;
+  @include font-details(#fff, "bc-regular", 1.2rem, none);
+  width: var(--product-size);
+  height: var(--product-size);
+  padding: 1rem;
+}
+@mixin details-image-style($image) {
+  background-image: $image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: var(--product-size);
+  height: var(--product-size);
+}
