@@ -1,6 +1,6 @@
 # JavaScript Project
 
-I have created a website using HTML, CSS and JavaScript, about a business that provides high-quality car detailing services. The website features a user-friendly interface and visually appealing design, making it easy for customers to find the services they need. It has been designed to be fully responsive, ensuring that it can be easily accessed and navigated on any device.
+I have created a website using HTML, CSS and JavaScript, about a company that provides high-quality car detailing services. The website features a user-friendly interface and visually appealing design, making it easy for customers to find the services they need. It has been designed to be fully responsive, ensuring that it can be easily accessed and navigated on any device.
 
 I have attached some pictures below to give you a glimpse of the content and design of my website. ( If you want to see more, you can access the website on https://car-detailing-project.netlify.app/ )
 
